@@ -1,0 +1,75 @@
+<resources>
+    <string name="app_name" translatable="false">Speaker Cleaner</string>
+
+    <string name="english">Anglais</string>
+    <string name="vietnamese">Vietnamien</string>
+    <string name="hindi">Hindi</string>
+    <string name="spanish">Espagnol</string>
+    <string name="french">Français</string>
+    <string name="portuguese">Portugais</string>
+
+    <string name="onboarding_intro1">Nettoyez le haut-parleur de l\'humidité et de la poussière</string>
+    <string name="onboarding_intro2">Utilisez une large gamme de fréquences Hz pour tester</string>
+
+    <string name="txt_categories">Catégories</string>
+    <string name="txt_share">Partager</string>
+    <string name="txt_language">Langue</string>
+    <string name="txt_write_setting_permission_title">Nécessite l\'autorisation de modifier les paramètres</string>
+    <string name="txt_ok">Ok</string>
+    <string name="txt_cancel">Annuler</string>
+    <string name="this_action_contain_ads">Cette action contient des publicités</string>
+    <string name="loading_cmp">Chargement de la plateforme de gestion du consentement</string>
+    <string name="txt_next">Suivant</string>
+    <string name="txt_get_start">Commencer</string>
+    <string name="are_you_sure_you_want_to_exit">Êtes-vous sûr de vouloir quitter?</string>
+    <string name="txt_exit">Quitter</string>
+    <string name="txt_premission_request">Demander des permissions</string>
+    <string name="txt_write_setting_permission">Modifier les paramètres</string>
+    <string name="txt_read_media_permisison">Lire les médias</string>
+    <string name="txt_receiver_notification">Recevoir des notifications</string>
+    <string name="txt_premission_request_message">Pour que l\'application fonctionne de manière stable, veuillez fournir les autorisations suivantes</string>
+    <string name="speaker_cleaner">Nettoyeur de Haut-Parleur</string>
+    <string name="auto_cleaner">Nettoyeur Automatique</string>
+    <string name="volume">Volume</string>
+    <string name="set_maximum_volume_for_better_result">Réglez le volume au maximum pour un meilleur résultat.</string>
+    <string name="txt_banner_1">Augmentez le volume au maximum</string>
+    <string name="txt_banner_2">Positionnez le téléphone de manière à ce que le haut-parleur soit orienté vers le bas</string>
+    <string name="home">Accueil</string>
+    <string name="manual_cleaner">Nettoyeur Manuel</string>
+    <string name="vibrate_cleaner">Nettoyeur par Vibration</string>
+    <string name="front">Avant</string>
+    <string name="ear">Oreille</string>
+    <string name="_0">0%</string>
+    <string name="speaker">Haut-parleur</string>
+    <string name="test_speaker">Tester le Haut-parleur</string>
+    <string name="click_on_below_play_button_amp_check_your_speaker"><![CDATA[Cliquez sur le bouton de lecture ci-dessous et vérifiez votre haut-parleur]]></string>
+    <string name="volume_boost_test">Augmentation du Volume (Test)</string>
+    <string name="frequency">Fréquence</string>
+    <string name="normal">Normal</string>
+    <string name="strong">Fort</string>
+    <string name="vibration">Vibration</string>
+    <string name="unlock_all_features">Déverrouiller Toutes les Fonctionnalités</string>
+    <string name="vip_customer_support">Support Client VIP</string>
+    <string name="remove_ads">Supprimer les Publicités</string>
+    <string name="frequently_asked_questions">Questions Fréquemment Posées</string>
+    <string name="customer_support">Support Client</string>
+    <string name="rate_us">Évaluez-nous</string>
+    <string name="language">Langue</string>
+    <string name="privacy_policy">Politique de Confidentialité</string>
+    <string name="terms_and_conditions">Conditions Générales</string>
+    <string name="txt_settings">Paramètres</string>
+    <string name="run_23_message">Exécutez 2-3 minutes avec différents niveaux de fréquence pour obtenir le résultat souhaité.</string>
+    <string name="please_wait_message">Veuillez patienter jusqu\'à la fin du processus pour un meilleur résultat.</string>
+    <string name="if_you_didn_mess">Si vous n\'obtenez pas les résultats souhaités \n essayez une autre méthode.</string>
+    <string name="txt_auto_cleaner">Nettoyage automatique</string>
+    <string name="txt_manual_cleaner">Nettoyage automatique</string>
+    <string name="txt_vibrate_cleaner">Nettoyage par vibration</string>
+    <string name="txt_choise_feature">Choisissez votre fonction</string>
+    <string name="txt_feature_request_message">Veuillez choisir votre fonction préférée</string>
+    <string name="txt_candle_blower">Souffleur</string>
+    <string name="txt_boost">Boost</string>
+    <string name="txt_low">Faible</string>
+    <string name="rate_title">Nous avons besoin de votre avis pour améliorer l\'application</string>
+    <string name="please_rate">Veuillez noter maintenant</string>
+    <string name="onboarding_intro3">Soufflez la bougie avec cette enceinte</string>
+</resources>

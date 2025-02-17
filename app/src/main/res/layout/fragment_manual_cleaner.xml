@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg"
+    tools:context=".component.cleanermanual.ManualCleanerFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/size20"
+            android:layout_marginTop="@dimen/size20"
+            android:background="@drawable/bg_border_cont_auto_cleaner"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/size20"
+            android:paddingVertical="@dimen/size20"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="@dimen/size150"
+                    android:layout_height="@dimen/size150"
+                    android:layout_centerInParent="true"
+                    android:src="@mipmap/img_manual" />
+
+                <TextView
+                    android:id="@+id/tvHZ"
+                    style="@style/TextView_Headline2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="100 Hz"
+                    android:textColor="@color/text" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvIntro"
+                style="@style/TextView_Body2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size20"
+                android:gravity="center"
+                android:text="@string/speaker"
+                android:textColor="@color/text2" />
+
+            <LinearLayout
+                android:id="@+id/lnBtnFontEar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size20"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnFront"
+                    style="@style/TextView_Body4"
+                    android:layout_width="@dimen/size130"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/size10"
+                    android:background="@drawable/select_btn_front_ear"
+                    android:elevation="0dp"
+                    android:stateListAnimator="@null"
+                    android:text="@string/front"
+                    android:textAllCaps="false" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnEar"
+                    style="@style/TextView_Body4"
+                    android:layout_width="@dimen/size130"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/size10"
+                    android:background="@drawable/select_btn_front_ear"
+                    android:elevation="0dp"
+                    android:stateListAnimator="@null"
+                    android:text="@string/ear"
+                    android:textAllCaps="false" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/size20"
+            android:layout_marginTop="@dimen/size20"
+            android:background="@drawable/bg_border_cont_auto_cleaner"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/size20"
+            android:paddingVertical="@dimen/size20"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+
+            <TextView
+                style="@style/TextView_Headline2"
+                android:text="@string/frequency" />
+
+            <SeekBar
+                android:id="@+id/sbVolume"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size20"
+                android:enabled="false"
+                android:indeterminate="false"
+                android:indeterminateOnly="false"
+                android:max="150"
+                android:maxHeight="@dimen/size4"
+                android:minHeight="@dimen/size4"
+                android:progress="50"
+                android:progressDrawable="@drawable/bg_progress_volume"
+                android:thumb="@drawable/thumb_custom"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <RelativeLayout
+                android:layout_width="@dimen/size50"
+                android:layout_height="@dimen/size50"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/size10"
+                >
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/btnPlayAndPause"
+                    android:layout_width="@dimen/size40"
+                    android:layout_height="@dimen/size40"
+                    android:background="@drawable/bg_btn_play_and_pause"
+                    android:src="@drawable/ic_play"
+                    android:layout_centerInParent="true"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="AD"
+                    android:background="#FFEB3B"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/size10"
+                    android:layout_alignParentRight="true"
+                    android:paddingHorizontal="@dimen/size2"
+                    />
+            </RelativeLayout>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

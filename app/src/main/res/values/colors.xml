@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="transparent">#00000000</color>
+    <color name="app_bg">#F3F5FB</color>
+    <color name="black30">#B3000000</color>
+    <color name="red">#FF564A</color>
+    <color name="gray">#949494</color>
+    <color name="app_main">#1BABDC</color>
+    <color name="text">#3D3D3D</color>
+    <color name="text1">#B0B0B0</color>
+    <color name="text2">#6D6D6D</color>
+    <color name="text3">#5D5D5D</color>
+    <color name="click_btn">#79DDFF</color>
+    <color name="click_btn_play">#ADEAFF</color>
+    <color name="bg_btn">#E2F3FC</color>
+    <color name="color_track">#E6E0E9</color>
+    <color name="color_progress">#E7E7E7</color>
+    <color name="cont_percent">#124D68</color>
+    <color name="start_color">#B6C0C5</color>
+    <color name="end_color">#18A5A7</color>
+    <color name="color_vibrate">#0C3145</color>
+    <color name="green">#4CAF50</color>
+</resources>

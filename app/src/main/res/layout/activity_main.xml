@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg"
+    android:orientation="vertical"
+    tools:context=".component.main.MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/topMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/size20"
+        android:layout_marginTop="@dimen/size32"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/btnSetting"
+            android:layout_width="@dimen/size36"
+            android:layout_height="@dimen/size36"
+            android:layout_marginEnd="@dimen/size20"
+            android:background="@drawable/background_circle_button_selector"
+            android:src="@drawable/ic_settings"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvTitleMain"
+            style="@style/TextView_Headline1"
+            android:layout_width="@dimen/size0"
+            android:layout_marginStart="@dimen/size20"
+            android:text="@string/speaker_cleaner"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btnSetting"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/vpMain"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topMain" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@id/banner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnHome"
+            style="@style/TextView_Body3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_click_fun_bottom_home"
+            android:drawableTop="@drawable/ic_home"
+            android:drawablePadding="@dimen/size4"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:paddingVertical="@dimen/size12"
+            android:text="@string/home"
+            android:textAllCaps="false"
+            android:textSize="@dimen/size10"
+            tools:ignore="SpUsage" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnAutoCleaner"
+            style="@style/TextView_Body3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_click_fun_bottom_home"
+            android:drawableTop="@drawable/ic_auto_cleaner"
+            android:drawablePadding="@dimen/size4"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:paddingVertical="@dimen/size12"
+            android:text="@string/auto_cleaner"
+            android:textAllCaps="false"
+            android:textSize="@dimen/size10"
+            tools:ignore="SpUsage" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnManualCleaner"
+            style="@style/TextView_Body3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_click_fun_bottom_home"
+            android:drawableTop="@drawable/ic_manual_cleaner"
+            android:drawablePadding="@dimen/size4"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:paddingVertical="@dimen/size12"
+            android:text="@string/manual_cleaner"
+            android:textAllCaps="false"
+            android:textSize="@dimen/size10"
+            tools:ignore="SpUsage" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnVibrateCleaner"
+            style="@style/TextView_Body3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/bg_click_fun_bottom_home"
+            android:drawableTop="@drawable/ic_vibrate_cleaner"
+            android:drawablePadding="@dimen/size4"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:paddingVertical="@dimen/size12"
+            android:text="@string/vibrate_cleaner"
+            android:textAllCaps="false"
+            android:textSize="@dimen/size10"
+            tools:ignore="SpUsage" />
+    </LinearLayout>
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/banner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/gray"
+        android:paddingTop="@dimen/size2"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/ad_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:adSize="BANNER"
+            app:adUnitId="4353" />
+    </com.facebook.shimmer.ShimmerFrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

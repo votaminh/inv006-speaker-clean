@@ -1,0 +1,76 @@
+<resources>
+    <string name="app_name" translatable="false">Speaker Cleaner</string>
+
+    <string name="english">अंग्रेज़ी</string>
+    <string name="vietnamese">वियतनामी</string>
+    <string name="hindi">हिंदी</string>
+    <string name="spanish">स्पेनिश</string>
+    <string name="french">फ़्रेंच</string>
+    <string name="portuguese">पुर्तगाली</string>
+
+    <string name="onboarding_intro1">स्पीकर को नमी और धूल से साफ करें</string>
+    <string name="onboarding_intro2">परीक्षण के लिए व्यापक Hz आवृत्ति रेंज का उपयोग करें</string>
+
+    <string name="txt_categories">श्रेणियाँ</string>
+    <string name="txt_share">साझा करें</string>
+    <string name="txt_language">भाषा</string>
+    <string name="txt_write_setting_permission_title">सेटिंग्स लिखने की अनुमति आवश्यक है</string>
+    <string name="txt_ok">ठीक है</string>
+    <string name="txt_cancel">रद्द करें</string>
+    <string name="this_action_contain_ads">इस क्रिया में विज्ञापन शामिल हैं</string>
+    <string name="loading_cmp">कंसेंट मैनेजमेंट प्लेटफॉर्म लोड हो रहा है</string>
+    <string name="txt_next">अगला</string>
+    <string name="txt_get_start">शुरू करें</string>
+    <string name="are_you_sure_you_want_to_exit">क्या आप वाकई बाहर निकलना चाहते हैं?</string>
+    <string name="txt_exit">बाहर निकलें</string>
+    <string name="txt_premission_request">अनुमतियाँ अनुरोध करें</string>
+    <string name="txt_write_setting_permission">सेटिंग्स लिखें</string>
+    <string name="txt_read_media_permisison">मीडिया पढ़ें</string>
+    <string name="txt_receiver_notification">सूचनाएँ प्राप्त करें</string>
+    <string name="txt_premission_request_message">एप्लिकेशन को स्थिर रूप से संचालित करने के लिए कृपया निम्नलिखित अनुमतियाँ प्रदान करें</string>
+    <string name="speaker_cleaner">स्पीकर क्लीनर</string>
+    <string name="auto_cleaner">ऑटो क्लीनर</string>
+    <string name="volume">वॉल्यूम</string>
+    <string name="set_maximum_volume_for_better_result">बेहतर परिणाम के लिए अधिकतम वॉल्यूम सेट करें।</string>
+    <string name="txt_banner_1">वॉल्यूम को अधिकतम पर बढ़ाएं</string>
+    <string name="txt_banner_2">फोन को इस प्रकार रखें कि स्पीकर नीचे की ओर हो</string>
+    <string name="home">होम</string>
+    <string name="manual_cleaner">मैनुअल क्लीनर</string>
+    <string name="vibrate_cleaner">वाइब्रेट क्लीनर</string>
+    <string name="front">फ्रंट</string>
+    <string name="ear">कान</string>
+    <string name="_0">0%</string>
+    <string name="speaker">स्पीकर</string>
+    <string name="test_speaker">स्पीकर का परीक्षण करें</string>
+    <string name="click_on_below_play_button_amp_check_your_speaker"><![CDATA[नीचे दिए गए प्ले बटन पर क्लिक करें और अपने स्पीकर की जांच करें]]></string>
+    <string name="volume_boost_test">वॉल्यूम बूस्ट (परीक्षण)</string>
+    <string name="frequency">आवृत्ति</string>
+    <string name="normal">सामान्य</string>
+    <string name="strong">मजबूत</string>
+    <string name="vibration">वाइब्रेशन</string>
+    <string name="unlock_all_features">सभी सुविधाओं को अनलॉक करें</string>
+    <string name="vip_customer_support">वीआईपी ग्राहक समर्थन</string>
+    <string name="remove_ads">विज्ञापन निकालें</string>
+    <string name="frequently_asked_questions">अक्सर पूछे जाने वाले प्रश्न</string>
+    <string name="customer_support">ग्राहक समर्थन</string>
+    <string name="rate_us">हमें रेट करें</string>
+    <string name="language">भाषा</string>
+    <string name="privacy_policy">गोपनीयता नीति</string>
+    <string name="terms_and_conditions">नियम और शर्तें</string>
+    <string name="txt_settings">सेटिंग्स</string>
+    <string name="run_23_message">वांछित परिणाम प्राप्त करने के लिए विभिन्न आवृत्ति स्तरों के साथ 2-3 मिनट चलाएँ।</string>
+    <string name="please_wait_message">बेहतर परिणाम के लिए प्रक्रिया पूरी होने तक प्रतीक्षा करें।</string>
+    <string name="if_you_didn_mess">यदि आपको वांछित परिणाम नहीं मिलते हैं \n तो कोई अन्य तरीका आजमाएं।</string>
+
+    <string name="txt_auto_cleaner">ऑटो क्लीन</string>
+    <string name="txt_manual_cleaner">ऑटो क्लीन</string>
+    <string name="txt_vibrate_cleaner">वाइब्रेट क्लीन</string>
+    <string name="txt_choise_feature">अपना फीचर चुनें</string>
+    <string name="txt_feature_request_message">कृपया अपना पसंदीदा फ़ंक्शन चुनें</string>
+    <string name="txt_candle_blower">ब्लोअर</string>
+    <string name="txt_boost">बूस्ट</string>
+    <string name="txt_low">कम</string>
+    <string name="rate_title">ऐप को बेहतर बनाने के लिए हमें आपकी समीक्षा की आवश्यकता है</string>
+    <string name="please_rate">कृपया अभी रेटिंग दें</string>
+    <string name="onboarding_intro3">ब्लो आउट इस स्पीकर के साथ मोमबत्ती</string>
+</resources>

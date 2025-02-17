@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg"
+    tools:context=".component.home.HomeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/vpBannerHome"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size200"
+            android:layout_marginHorizontal="@dimen/size20"
+            android:layout_marginTop="@dimen/size32"
+            android:background="@drawable/bg_border_cont_home"
+            android:padding="@dimen/size16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/lnFuntion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/size20"
+            android:layout_marginTop="@dimen/size20"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vpBannerHome">
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnAutoClean"
+                style="@style/TextView_Body3"
+                android:drawableTint="@color/app_main"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/bg_click_fun_home"
+                android:drawableTop="@drawable/ic_auto_cleaner"
+                android:drawablePadding="@dimen/size6"
+                android:elevation="0dp"
+                android:paddingTop="@dimen/size12"
+                android:paddingBottom="@dimen/size8"
+                android:stateListAnimator="@null"
+                android:text="@string/auto_cleaner"
+                android:textAllCaps="false" />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnManualClean"
+                style="@style/TextView_Body3"
+                android:drawableTint="@color/app_main"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/size12"
+                android:layout_weight="1"
+                android:background="@drawable/bg_click_fun_home"
+                android:drawableTop="@drawable/ic_manual_cleaner"
+                android:drawablePadding="@dimen/size6"
+                android:elevation="0dp"
+                android:paddingTop="@dimen/size12"
+                android:paddingBottom="@dimen/size8"
+                android:stateListAnimator="@null"
+                android:text="@string/manual_cleaner"
+                android:textAllCaps="false" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnVibrateClean"
+                style="@style/TextView_Body3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/bg_click_fun_home"
+                android:drawableTop="@drawable/ic_vibrate_cleaner"
+                android:drawablePadding="@dimen/size6"
+                android:elevation="0dp"
+                android:drawableTint="@color/app_main"
+                android:paddingTop="@dimen/size12"
+                android:paddingBottom="@dimen/size8"
+                android:stateListAnimator="@null"
+                android:text="@string/vibrate_cleaner"
+                android:textAllCaps="false" />
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnBlower"
+            style="@style/TextView_Body3"
+            android:drawableTint="@color/app_main"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/bg_click_fun_home"
+            android:drawableTop="@drawable/ic_blower"
+            android:drawablePadding="@dimen/size6"
+            android:elevation="0dp"
+            android:paddingTop="@dimen/size12"
+            android:paddingBottom="@dimen/size8"
+            android:stateListAnimator="@null"
+            android:text="@string/txt_candle_blower"
+            android:textAllCaps="false"
+            android:layout_marginTop="@dimen/size12"
+            app:layout_constraintLeft_toLeftOf="@id/lnFuntion"
+            app:layout_constraintRight_toRightOf="@id/lnFuntion"
+            app:layout_constraintTop_toBottomOf="@id/lnFuntion"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/size20"
+            android:layout_marginTop="@dimen/size12"
+            android:background="@drawable/bg_border_cont_home"
+            android:orientation="vertical"
+            android:padding="@dimen/size20"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnBlower">
+
+            <TextView
+                style="@style/TextView_Headline2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/volume" />
+
+            <TextView
+                style="@style/TextView_Body2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/set_maximum_volume_for_better_result" />
+
+            <SeekBar
+                android:id="@+id/sbVolume"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size20"
+                android:enabled="false"
+                android:indeterminate="false"
+                android:indeterminateOnly="false"
+                android:max="100"
+                android:maxHeight="@dimen/size4"
+                android:minHeight="@dimen/size4"
+                android:progress="30"
+                android:progressDrawable="@drawable/bg_progress_volume"
+                android:thumb="@drawable/thumb_custom"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

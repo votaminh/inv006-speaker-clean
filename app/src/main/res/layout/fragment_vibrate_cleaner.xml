@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg"
+    tools:context=".component.cleanervibrate.VibrateCleanerFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/size20"
+        android:layout_marginTop="@dimen/size20"
+        android:background="@drawable/bg_border_cont_auto_cleaner"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingVertical="@dimen/size20">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="UselessParent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:importantForAccessibility="no"
+                android:src="@mipmap/img_vibrate" />
+<!--            <com.airbnb.lottie.LottieAnimationView-->
+            <!--                android:id="@+id/anvConnectedDevice"-->
+            <!--                android:layout_width="@dimen/size200"-->
+            <!--                android:layout_height="@dimen/size200"-->
+            <!--                android:layout_centerInParent="true"-->
+            <!--                app:lottie_autoPlay="true"-->
+            <!--                app:lottie_loop="true"-->
+            <!--                app:lottie_rawRes="@raw/anim4" />-->
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvPercent"
+                style="@style/TextView_Body1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/bg_percent_vibrate"
+                android:gravity="center"
+                android:text="0%" />
+        </RelativeLayout>
+
+        <TextView
+            style="@style/TextView_Body2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size20"
+            android:text="@string/vibration"
+            android:textSize="@dimen/size14" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size20"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnNormal"
+                style="@style/TextView_Body4"
+                android:layout_width="@dimen/size130"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/size10"
+                android:background="@drawable/select_btn_front_ear"
+                android:elevation="0dp"
+                android:stateListAnimator="@null"
+                android:text="@string/normal"
+                android:textAllCaps="false" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnStrong"
+                style="@style/TextView_Body4"
+                android:layout_width="@dimen/size130"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/size10"
+                android:background="@drawable/select_btn_front_ear"
+                android:elevation="0dp"
+                android:stateListAnimator="@null"
+                android:text="@string/strong"
+                android:textAllCaps="false" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="@dimen/size50"
+            android:layout_height="@dimen/size50"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/size20"
+            >
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/btnPlayAndPause"
+                android:layout_width="@dimen/size40"
+                android:layout_height="@dimen/size40"
+                android:background="@drawable/bg_btn_play_and_pause"
+                android:src="@drawable/ic_play"
+                android:layout_centerInParent="true"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="AD"
+                android:background="#FFEB3B"
+                android:textColor="@color/white"
+                android:textSize="@dimen/size10"
+                android:layout_alignParentRight="true"
+                android:paddingHorizontal="@dimen/size2"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+</FrameLayout>

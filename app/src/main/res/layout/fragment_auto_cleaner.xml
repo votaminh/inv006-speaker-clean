@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg"
+    tools:context=".component.cleanerauto.AutoCleanerFragment">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/size20"
+        android:layout_marginTop="@dimen/size20"
+        android:background="@drawable/bg_border_cont_auto_cleaner"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingVertical="@dimen/size40">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.msc.speaker_cleaner.view.ArcProgressView
+                android:id="@+id/arcView"
+                android:layout_width="@dimen/size240"
+                android:layout_height="@dimen/size240"
+                android:layout_centerInParent="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size82"
+                android:layout_marginHorizontal="@dimen/size20"
+                android:layout_marginBottom="@dimen/size20"
+                android:background="@drawable/bg_border_cont_percent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <TextView
+                    android:id="@+id/tvStartPercent"
+                    style="@style/TextView_Body2"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="@dimen/size22"
+                    android:layout_marginTop="@dimen/size8"
+                    android:text="0%" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvPercent"
+                        style="@style/TextView_Body1"
+                        android:text="0%" />
+
+                    <TextView
+                        style="@style/TextView_Body4"
+                        android:text="@string/speaker"
+                        android:textColor="@color/text1" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvAndPercent"
+                    style="@style/TextView_Body2"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="@dimen/size8"
+                    android:layout_marginEnd="@dimen/size18"
+                    android:text="100%" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="@dimen/size50"
+                android:layout_height="@dimen/size50"
+                app:layout_constraintBottom_toTopOf="@+id/relativeLayout"
+                app:layout_constraintEnd_toEndOf="@+id/arcView"
+                app:layout_constraintStart_toStartOf="@+id/arcView"
+                app:layout_constraintTop_toTopOf="parent">
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/btnPlayAndPause"
+                    android:layout_width="@dimen/size40"
+                    android:layout_height="@dimen/size40"
+                    android:background="@drawable/bg_btn_play_and_pause"
+                    android:src="@drawable/ic_play"
+                    android:layout_centerInParent="true"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="AD"
+                    android:background="#FFEB3B"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/size10"
+                    android:layout_alignParentRight="true"
+                    android:paddingHorizontal="@dimen/size2"
+                    />
+            </RelativeLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/tvContAuto"
+            style="@style/TextView_Body2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:maxLines="2"
+            android:paddingHorizontal="@dimen/size20"
+            android:text="@string/please_wait_message" />
+
+        <LinearLayout
+            android:id="@+id/lnBtnFrontEar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size20"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnFront"
+                style="@style/TextView_Body4"
+                android:layout_width="@dimen/size130"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/size10"
+                android:background="@drawable/select_btn_front_ear"
+                android:elevation="0dp"
+                android:stateListAnimator="@null"
+                android:text="@string/front"
+                android:textAllCaps="false" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnEar"
+                style="@style/TextView_Body4"
+                android:layout_width="@dimen/size130"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/size10"
+                android:background="@drawable/select_btn_front_ear"
+                android:elevation="0dp"
+                android:stateListAnimator="@null"
+                android:text="@string/ear"
+                android:textAllCaps="false" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

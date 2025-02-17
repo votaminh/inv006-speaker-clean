@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg"
+    tools:context=".component.setting.SettingActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/topSetting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/size20"
+        android:layout_marginTop="@dimen/size32"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/btnSetting"
+            android:layout_width="@dimen/size36"
+            android:layout_height="@dimen/size36"
+            android:background="@drawable/background_circle_button_selector"
+            android:src="@drawable/ic_back_new"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvTitleMain"
+            style="@style/TextView_Headline1"
+            android:layout_width="@dimen/size0"
+            android:gravity="center"
+            android:text="@string/txt_settings"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/btnSetting"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="@dimen/size20"
+        android:layout_marginTop="@dimen/size20"
+        android:background="@drawable/bg_border_cont_auto_cleaner"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topSetting">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnLanguage"
+            style="@style/TextView_Body4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_click_frequently"
+            android:drawableStart="@drawable/ic_lang"
+            android:drawableEnd="@drawable/ic_right"
+            android:drawablePadding="@dimen/size16"
+            android:elevation="0dp"
+            android:gravity="start|center_vertical"
+            android:paddingHorizontal="@dimen/size20"
+            android:paddingVertical="@dimen/size18"
+            android:stateListAnimator="@null"
+            android:text="@string/language"
+            android:textAllCaps="false"
+            android:textColor="@color/text" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnRateUs"
+            style="@style/TextView_Body4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_click_item_setting"
+            android:drawableStart="@drawable/ic_start"
+            android:drawableEnd="@drawable/ic_right"
+            android:drawablePadding="@dimen/size16"
+            android:elevation="0dp"
+            android:gravity="start|center_vertical"
+            android:paddingHorizontal="@dimen/size20"
+            android:paddingVertical="@dimen/size18"
+            android:stateListAnimator="@null"
+            android:text="@string/rate_us"
+            android:textAllCaps="false"
+            android:textColor="@color/text" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnPrivacyPolicy"
+            style="@style/TextView_Body4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_click_term"
+            android:drawableStart="@drawable/ic_policy"
+            android:drawableEnd="@drawable/ic_right"
+            android:drawablePadding="@dimen/size16"
+            android:elevation="0dp"
+            android:gravity="start|center_vertical"
+            android:paddingHorizontal="@dimen/size20"
+            android:paddingVertical="@dimen/size18"
+            android:stateListAnimator="@null"
+            android:text="@string/privacy_policy"
+            android:textAllCaps="false"
+            android:textColor="@color/text" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,78 @@
+<resources>
+    <string name="app_name" translatable="false">Speaker Cleaner</string>
+    <string name="facebook_app_id" translatable="false">965249232293830</string>
+    <string name="facebook_client_token" translatable="false">18fe348f362aac6aec96cba4f8d0b959</string>
+
+    <string name="english">English</string>
+    <string name="vietnamese">Vietnamese</string>
+    <string name="hindi">Hindi</string>
+    <string name="spanish">Spanish</string>
+    <string name="french">French</string>
+    <string name="portuguese">Portuguese</string>
+
+    <string name="onboarding_intro1">Clean the Speaker from Moisture &amp; Dust</string>
+    <string name="onboarding_intro2">Use a Wide Hz Frequency Range for Testing</string>
+
+    <string name="txt_categories">Categories</string>
+    <string name="txt_share">Share</string>
+    <string name="txt_language">Language</string>
+    <string name="txt_write_setting_permission_title">Requires permission to write settings</string>
+    <string name="txt_ok">Ok</string>
+    <string name="txt_cancel">Cancel</string>
+    <string name="this_action_contain_ads">This action contain Ads</string>
+    <string name="loading_cmp">Loading Consent Management Platform</string>
+    <string name="txt_next">Next</string>
+    <string name="txt_get_start">Get start</string>
+    <string name="are_you_sure_you_want_to_exit">are you sure you want to exit?</string>
+    <string name="txt_exit">Exit</string>
+    <string name="txt_premission_request">Request permissions</string>
+    <string name="txt_write_setting_permission">Write setting</string>
+    <string name="txt_read_media_permisison">Read media</string>
+    <string name="txt_receiver_notification">Get notifications</string>
+    <string name="txt_premission_request_message">In order for the application to operate stably, please provide the following permissions</string>
+    <string name="speaker_cleaner">Speaker Cleaner</string>
+    <string name="auto_cleaner">Auto Cleaner</string>
+    <string name="volume">Volume</string>
+    <string name="set_maximum_volume_for_better_result">Set maximum volume for better result.</string>
+    <string name="txt_banner_1">Raise volume to maximum</string>
+    <string name="txt_banner_2">Position the phone in such a way that the speaker is facing a down</string>
+    <string name="home">Home</string>
+    <string name="manual_cleaner">Manual Cleaner</string>
+    <string name="vibrate_cleaner">Vibrate Cleaner</string>
+    <string name="front">Front</string>
+    <string name="ear">Ear</string>
+    <string name="_0">0%</string>
+    <string name="speaker">Speaker</string>
+    <string name="test_speaker">Test Speaker</string>
+    <string name="click_on_below_play_button_amp_check_your_speaker"><![CDATA[Click on below play button & check your speaker]]></string>
+    <string name="volume_boost_test">Volume Boost (Test)</string>
+    <string name="frequency">Frequency</string>
+    <string name="normal">Normal</string>
+    <string name="strong">Strong</string>
+    <string name="vibration">Vibration</string>
+    <string name="unlock_all_features">Unlock All Features</string>
+    <string name="vip_customer_support">VIP Customer Support</string>
+    <string name="remove_ads">Remove Ads</string>
+    <string name="frequently_asked_questions">Frequently Asked Questions</string>
+    <string name="customer_support">Customer Support</string>
+    <string name="rate_us">Rate Us</string>
+    <string name="language">Language</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="terms_and_conditions">Terms and Conditions</string>
+    <string name="txt_settings">Settings</string>
+    <string name="run_23_message">Run 2-3 minutes with different frequency levels to get desired result.</string>
+    <string name="please_wait_message">Please wait until complete the process for a better result.</string>
+    <string name="if_you_didn_mess">If you do not get the desired results \n try another method.</string>
+    <string name="txt_auto_cleaner">Auto cleaner</string>
+    <string name="txt_manual_cleaner">Manual cleaner</string>
+    <string name="txt_vibrate_cleaner">Vibrate cleaner</string>
+    <string name="txt_choise_feature">Choise your feature</string>
+    <string name="txt_feature_request_message">Please choose your favorite functions</string>
+    <string name="txt_candle_blower">Blower</string>
+    <string name="txt_boost">Boost</string>
+    <string name="txt_low">Low</string>
+    <string name="rate_title">We need your review to improve the application</string>
+    <string name="please_rate">Please rate now</string>
+    <string name="onboarding_intro3">Blow out the candle with this Speaker</string>
+
+</resources>

@@ -1,0 +1,186 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'com.google.dagger.hilt.android'
+    id 'kotlin-kapt'
+    id 'com.google.gms.google-services'
+    id 'com.google.firebase.crashlytics'
+}
+
+android {
+    namespace 'com.msc.speaker_cleaner'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.trn.speaker.cleaner.remove.water.cleanspkrwater.speakerdustremover"
+        minSdk 24
+        targetSdk 34
+        versionCode 25
+        versionName "25.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        def formattedDate = new Date().format("MM.dd.yyyy")
+        archivesBaseName = "speaker${versionName}(${versionCode})_${formattedDate}"
+    }
+
+    signingConfigs {
+        release {
+            storeFile file("key/speaker_clean.jks")
+            storePassword "123456"
+            keyAlias "key0"
+            keyPassword "123456"
+        }
+    }
+
+    buildTypes {
+        release {
+            signingConfig signingConfigs.release
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+
+            manifestPlaceholders = [ad_app_id: "ca-app-pub-7121787699260095~5636883482"]
+
+            buildConfigField "String", "open_resume", "\"ca-app-pub-7121787699260095/3401386787\""
+
+            buildConfigField "String", "inter_splash", "\"ca-app-pub-7121787699260095/6170202114\""
+            buildConfigField "String", "inter_splash_high", "\"ca-app-pub-7121787699260095/6245391525\""
+            buildConfigField "String", "inter_home", "\"ca-app-pub-7121787699260095/2419477606\""
+
+            buildConfigField "String", "native_language_1_1", "\"ca-app-pub-7121787699260095/8921522379\""
+            buildConfigField "String", "native_language_1_2", "\"ca-app-pub-7121787699260095/3544038776\""
+            buildConfigField "String", "native_language_2_1", "\"ca-app-pub-7121787699260095/2047295052\""
+            buildConfigField "String", "native_language_2_2", "\"ca-app-pub-7121787699260095/9122732076\""
+
+            buildConfigField "String", "native_onboarding", "\"ca-app-pub-7121787699260095/9040726272\""
+            buildConfigField "String", "native_onboarding2", "\"ca-app-pub-7121787699260095/8642097376\""
+            buildConfigField "String", "native_onboarding3", "\"ca-app-pub-7121787699260095/1279383187\""
+            buildConfigField "String", "native_onboarding_2_1", "\"ca-app-pub-7121787699260095/5914114802\""
+            buildConfigField "String", "native_onboarding_2_3", "\"ca-app-pub-7121787699260095/3287951462\""
+
+            buildConfigField "String", "native_feature", "\"ca-app-pub-7121787699260095/3352467087\""
+            buildConfigField "String", "native_full_screen", "\"ca-app-pub-7121787699260095/3461030290\""
+            buildConfigField "String", "native_full_screen2", "\"ca-app-pub-7121787699260095/5774624405\""
+
+            buildConfigField "String", "banner_collap", "\"ca-app-pub-7121787699260095/3732559276\""
+            buildConfigField "String", "banner_splash", "\"ca-app-pub-7121787699260095/8601742575\""
+
+            buildConfigField "String", "reward_feature", "\"ca-app-pub-7121787699260095/8998747645\""
+        }
+
+        debug {
+            manifestPlaceholders = [ad_app_id: "ca-app-pub-3940256099942544~3347511713"]
+
+            buildConfigField "String", "open_resume", "\"ca-app-pub-3940256099942544/9257395921\""
+
+            buildConfigField "String", "inter_splash", "\"ca-app-pub-3940256099942544/1033173712\""
+            buildConfigField "String", "inter_splash_high", "\"ca-app-pub-3940256099942544/1033173712\""
+            buildConfigField "String", "inter_home", "\"ca-app-pub-3940256099942544/1033173712\""
+
+            buildConfigField "String", "native_language_1_1", "\"ca-app-pub-3940256099942544/2247696110\""
+            buildConfigField "String", "native_language_1_2", "\"ca-app-pub-3940256099942544/2247696110\""
+            buildConfigField "String", "native_language_2_1", "\"ca-app-pub-3940256099942544/2247696110\""
+            buildConfigField "String", "native_language_2_2", "\"ca-app-pub-3940256099942544/2247696110\""
+
+
+            buildConfigField "String", "native_onboarding", "\"ca-app-pub-3940256099942544/2247696110\""
+            buildConfigField "String", "native_onboarding2", "\"ca-app-pub-3940256099942544/2247696110\""
+            buildConfigField "String", "native_onboarding3", "\"ca-app-pub-3940256099942544/2247696110\""
+            buildConfigField "String", "native_onboarding_2_1", "\"ca-app-pub-3940256099942544/2247696110\""
+            buildConfigField "String", "native_onboarding_2_3", "\"ca-app-pub-3940256099942544/2247696110\""
+
+
+            buildConfigField "String", "native_feature", "\"ca-app-pub-3940256099942544/2247696110\""
+            buildConfigField "String", "native_full_screen", "\"ca-app-pub-3940256099942544/2247696110\""
+            buildConfigField "String", "native_full_screen2", "\"ca-app-pub-3940256099942544/2247696110\""
+
+            buildConfigField "String", "banner_collap", "\"ca-app-pub-3940256099942544/2014213617\""
+            buildConfigField "String", "banner_splash", "\"ca-app-pub-3940256099942544/2014213617\""
+
+            buildConfigField "String", "reward_feature", "\"ca-app-pub-3940256099942544/5224354917\""
+
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    kotlinOptions {
+        jvmTarget = '17'
+    }
+    buildFeatures {
+        viewBinding true
+        buildConfig true
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.core:core-ktx:1.8.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.5.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.activity:activity:1.9.0'
+//    implementation project(':m_utils')
+    implementation files('libs/m_utils-release4.aar')
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    // hilt
+    implementation "com.google.dagger:hilt-android:2.46.1"
+    kapt "com.google.dagger:hilt-compiler:2.46.1"
+
+    // ViewModel and LiveData
+    implementation "androidx.lifecycle:lifecycle-extensions:2.2.0"
+    implementation "androidx.lifecycle:lifecycle-runtime:2.6.1"
+    implementation "androidx.lifecycle:lifecycle-common-java8:2.6.1"
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4'
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.5.1"
+    implementation "androidx.fragment:fragment-ktx:1.5.7"
+
+    // gson
+    implementation "com.google.code.gson:gson:2.8.5"
+
+    //glide
+    implementation 'com.github.bumptech.glide:glide:4.16.0'
+
+    implementation 'com.facebook.shimmer:shimmer:0.5.0'
+
+    implementation "androidx.room:room-runtime:2.2.4"
+    kapt "androidx.room:room-compiler:2.2.4"
+    implementation "androidx.room:room-ktx:2.2.5"
+
+    //firebase
+    implementation 'com.google.firebase:firebase-config-ktx:21.5.0'
+    implementation(platform("com.google.firebase:firebase-bom:32.1.1"))
+    implementation("com.google.firebase:firebase-crashlytics-ktx")
+    implementation("com.google.firebase:firebase-analytics-ktx")
+    implementation("com.google.firebase:firebase-database-ktx")
+    implementation("com.google.firebase:firebase-messaging")
+
+    // ump
+    implementation("com.google.android.ump:user-messaging-platform:2.1.0")
+
+    // viewpager dot indicator
+    implementation("com.tbuonomo:dotsindicator:5.0")
+
+    //lottie load gif
+    implementation ("com.airbnb.android:lottie:6.0.0")
+
+    // sdk login fb
+    implementation 'com.facebook.android:facebook-android-sdk:latest.release'
+
+    // mediation
+    def ads_version = "22.1.0"
+    implementation "com.google.android.gms:play-services-ads:$ads_version"
+    implementation("com.google.ads.mediation:facebook:6.16.0.0")
+    implementation("com.google.ads.mediation:mintegral:16.5.41.0")
+    implementation("com.google.ads.mediation:pangle:5.5.0.9.0")
+    implementation("com.google.ads.mediation:vungle:7.0.0.1")
+    implementation("com.google.ads.mediation:inmobi:10.6.1.0")
+    implementation("com.google.ads.mediation:ironsource:8.2.0.0")
+    implementation("com.google.ads.mediation:applovin:12.5.0.1")
+}

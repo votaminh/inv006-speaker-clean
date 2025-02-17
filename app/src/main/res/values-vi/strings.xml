@@ -1,0 +1,76 @@
+<resources>
+    <string name="app_name" translatable="false">Speaker Cleaner</string>
+
+    <string name="english">Tiếng Anh</string>
+    <string name="vietnamese">Tiếng Việt</string>
+    <string name="hindi">Tiếng Hindi</string>
+    <string name="spanish">Tiếng Tây Ban Nha</string>
+    <string name="french">Tiếng Pháp</string>
+    <string name="portuguese">Tiếng Bồ Đào Nha</string>
+
+    <string name="onboarding_intro1">Làm sạch loa khỏi độ ẩm và bụi</string>
+    <string name="onboarding_intro2">Sử dụng dải tần số Hz rộng để thử nghiệm</string>
+
+    <string name="txt_categories">Danh mục</string>
+    <string name="txt_share">Chia sẻ</string>
+    <string name="txt_language">Ngôn ngữ</string>
+    <string name="txt_write_setting_permission_title">Yêu cầu quyền ghi cài đặt</string>
+    <string name="txt_ok">Ok</string>
+    <string name="txt_cancel">Hủy</string>
+    <string name="this_action_contain_ads">Hành động này chứa quảng cáo</string>
+    <string name="loading_cmp">Đang tải Nền tảng Quản lý Đồng ý</string>
+    <string name="txt_next">Tiếp theo</string>
+    <string name="txt_get_start">Bắt đầu</string>
+    <string name="are_you_sure_you_want_to_exit">Bạn có chắc chắn muốn thoát không?</string>
+    <string name="txt_exit">Thoát</string>
+    <string name="txt_premission_request">Yêu cầu quyền</string>
+    <string name="txt_write_setting_permission">Ghi cài đặt</string>
+    <string name="txt_read_media_permisison">Đọc phương tiện</string>
+    <string name="txt_receiver_notification">Nhận thông báo</string>
+    <string name="txt_premission_request_message">Để ứng dụng hoạt động ổn định, vui lòng cung cấp các quyền sau</string>
+    <string name="speaker_cleaner">Làm sạch loa</string>
+    <string name="auto_cleaner">Làm sạch tự động</string>
+    <string name="volume">Âm lượng</string>
+    <string name="set_maximum_volume_for_better_result">Đặt âm lượng tối đa để có kết quả tốt hơn.</string>
+    <string name="txt_banner_1">Tăng âm lượng tối đa</string>
+    <string name="txt_banner_2">Đặt điện thoại sao cho loa hướng xuống dưới</string>
+    <string name="home">Trang chủ</string>
+    <string name="manual_cleaner">Làm sạch thủ công</string>
+    <string name="vibrate_cleaner">Làm sạch bằng rung</string>
+    <string name="front">Phía trước</string>
+    <string name="ear">Tai</string>
+    <string name="_0">0%</string>
+    <string name="speaker">Loa</string>
+    <string name="test_speaker">Kiểm tra loa</string>
+    <string name="click_on_below_play_button_amp_check_your_speaker"><![CDATA[Nhấp vào nút phát bên dưới và kiểm tra loa của bạn]]></string>
+    <string name="volume_boost_test">Tăng âm lượng (Thử nghiệm)</string>
+    <string name="frequency">Tần số</string>
+    <string name="normal">Bình thường</string>
+    <string name="strong">Mạnh</string>
+    <string name="vibration">Rung</string>
+    <string name="unlock_all_features">Mở khóa tất cả các tính năng</string>
+    <string name="vip_customer_support">Hỗ trợ khách hàng VIP</string>
+    <string name="remove_ads">Xóa quảng cáo</string>
+    <string name="frequently_asked_questions">Câu hỏi thường gặp</string>
+    <string name="customer_support">Hỗ trợ khách hàng</string>
+    <string name="rate_us">Đánh giá chúng tôi</string>
+    <string name="language">Ngôn ngữ</string>
+    <string name="privacy_policy">Chính sách bảo mật</string>
+    <string name="terms_and_conditions">Điều khoản và Điều kiện</string>
+    <string name="txt_settings">Cài đặt</string>
+    <string name="run_23_message">Chạy 2-3 phút với các mức tần số khác nhau để đạt kết quả mong muốn.</string>
+    <string name="please_wait_message">Vui lòng chờ cho đến khi hoàn thành quá trình để có kết quả tốt hơn.</string>
+    <string name="if_you_didn_mess">Nếu bạn không đạt được kết quả mong muốn \n hãy thử phương pháp khác.</string>
+
+    <string name="txt_auto_cleaner">Tự động dọn dẹp</string>
+    <string name="txt_manual_cleaner">Tự động dọn dẹp</string>
+    <string name="txt_vibrate_cleaner">Rung dọn dẹp</string>
+    <string name="txt_choise_feature">Chọn tính năng của bạn</string>
+    <string name="txt_feature_request_message">Vui lòng chọn chức năng yêu thích của bạn</string>
+    <string name="txt_candle_blower">Máy thổi</string>
+    <string name="txt_boost">Tăng cường</string>
+    <string name="txt_low">Thấp</string>
+    <string name="rate_title">Chúng tôi cần đánh giá của bạn để cải thiện ứng dụng</string>
+    <string name="please_rate">Vui lòng đánh giá ngay</string>
+    <string name="onboarding_intro3">Thổi tắt ngọn nến bằng Loa này</string>
+</resources>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/layout_toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/size10"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/size100"
+                android:adjustViewBounds="true"
+                android:src="@drawable/ic_setting_permission" />
+
+            <TextView
+                style="@style/TextView_Headline2"
+                android:layout_marginHorizontal="@dimen/size20"
+                android:text="@string/txt_choise_feature" />
+
+            <TextView
+                style="@style/TextView_Body2"
+                android:layout_marginHorizontal="@dimen/size20"
+                android:text="@string/txt_feature_request_message"
+                android:textColor="@color/gray" />
+
+            <LinearLayout
+                android:id="@+id/llWriteSetting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/size30"
+                android:layout_marginTop="@dimen/size10"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/TextView_Body2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/txt_auto_cleaner"
+                    android:textColor="@color/black"
+                    />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/sw1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="false" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llReadMedia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/size30"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/TextView_Body2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/txt_manual_cleaner"
+                    android:textColor="@color/black" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/sw2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="false" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llNotification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/size30"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/TextView_Body2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/txt_vibrate_cleaner"
+                    android:textColor="@color/black"/>
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/sw3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="false" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/fl_adplaceholder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include
+            android:id="@+id/native_ad_view"
+            layout="@layout/ad_unified" />
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <TextView
+        android:id="@+id/tvNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginVertical="@dimen/size20"
+        android:paddingHorizontal="@dimen/size30"
+        android:paddingTop="@dimen/size5"
+        android:paddingBottom="@dimen/size6"
+        android:text="@string/txt_next"
+        android:textColor="@color/app_main"
+        android:textSize="@dimen/size16" />
+</LinearLayout>
