@@ -81,7 +81,8 @@ class ManualCleanerFragment : BaseFragment<FragmentManualCleanerBinding>() {
             stateAudio.observe(requireActivity()) {
                 when (it) {
                     StateAudio.PLAYING -> {
-                        viewBinding.btnPlayAndPause.setImageResource(R.drawable.ic_pause)
+                        viewBinding.imvPlayAndPause.setImageResource(R.drawable.ic_pause006)
+                        viewBinding.tvPlayAndPause.text = getString(R.string.pause)
                         viewBinding.tvIntro.text =
                             getString(R.string.run_23_message)
                         viewBinding.lnBtnFontEar.visibility = View.GONE
@@ -89,7 +90,8 @@ class ManualCleanerFragment : BaseFragment<FragmentManualCleanerBinding>() {
                     }
 
                     StateAudio.STOP -> {
-                        viewBinding.btnPlayAndPause.setImageResource(R.drawable.ic_play)
+                        viewBinding.imvPlayAndPause.setImageResource(R.drawable.ic_play006)
+                        viewBinding.tvPlayAndPause.text = getString(R.string.play)
                         viewBinding.tvIntro.text = getString(R.string.speaker)
                         viewBinding.lnBtnFontEar.visibility = View.VISIBLE
 

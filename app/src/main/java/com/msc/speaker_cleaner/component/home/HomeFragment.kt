@@ -66,20 +66,6 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
         )
 
         viewBinding.apply {
-            vpBannerHome.adapter = vpAdapter
-
-            vpBannerHome.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
-                override fun onPageSelected(position: Int) {
-                    super.onPageSelected(position)
-                    Timer().schedule(3000) {
-                        if (position == 1) {
-                            vpBannerHome.currentItem = 0
-                        } else {
-                            vpBannerHome.currentItem = position + 1
-                        }
-                    }
-                }
-            })
 
             sbVolume.max = maxVolume
             sbVolume.progress = currentVolume

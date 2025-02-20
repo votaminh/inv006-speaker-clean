@@ -11,13 +11,13 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <androidx.viewpager2.widget.ViewPager2
+        <ImageView
             android:id="@+id/vpBannerHome"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/size200"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/size20"
             android:layout_marginTop="@dimen/size32"
-            android:background="@drawable/bg_border_cont_home"
+            android:background="@drawable/ic_main006"
             android:padding="@dimen/size16"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -43,13 +43,14 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@drawable/bg_click_fun_home"
-                android:drawableTop="@drawable/ic_auto_cleaner"
+                android:drawableTop="@drawable/ic_auto_cleaner006"
                 android:drawablePadding="@dimen/size6"
                 android:elevation="0dp"
                 android:paddingTop="@dimen/size12"
                 android:paddingBottom="@dimen/size8"
                 android:stateListAnimator="@null"
                 android:text="@string/auto_cleaner"
+                android:textColor="@color/black"
                 android:textAllCaps="false" />
 
 
@@ -62,13 +63,14 @@
                 android:layout_marginHorizontal="@dimen/size12"
                 android:layout_weight="1"
                 android:background="@drawable/bg_click_fun_home"
-                android:drawableTop="@drawable/ic_manual_cleaner"
+                android:drawableTop="@drawable/ic_manual_cleaner006"
                 android:drawablePadding="@dimen/size6"
                 android:elevation="0dp"
                 android:paddingTop="@dimen/size12"
                 android:paddingBottom="@dimen/size8"
                 android:stateListAnimator="@null"
                 android:text="@string/manual_cleaner"
+                android:textColor="@color/black"
                 android:textAllCaps="false" />
 
             <androidx.appcompat.widget.AppCompatButton
@@ -78,7 +80,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="@drawable/bg_click_fun_home"
-                android:drawableTop="@drawable/ic_vibrate_cleaner"
+                android:drawableTop="@drawable/ic_vibrate_cleaner006"
                 android:drawablePadding="@dimen/size6"
                 android:elevation="0dp"
                 android:drawableTint="@color/app_main"
@@ -86,37 +88,61 @@
                 android:paddingBottom="@dimen/size8"
                 android:stateListAnimator="@null"
                 android:text="@string/vibrate_cleaner"
+                android:textColor="@color/black"
                 android:textAllCaps="false" />
         </LinearLayout>
 
-        <androidx.appcompat.widget.AppCompatButton
+        <RelativeLayout
             android:id="@+id/btnBlower"
-            style="@style/TextView_Body3"
             android:drawableTint="@color/app_main"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:background="@drawable/bg_click_fun_home"
-            android:drawableTop="@drawable/ic_blower"
+            android:background="@drawable/bg_click_fun_home1"
             android:drawablePadding="@dimen/size6"
             android:elevation="0dp"
             android:paddingTop="@dimen/size12"
             android:paddingBottom="@dimen/size8"
             android:stateListAnimator="@null"
-            android:text="@string/txt_candle_blower"
-            android:textAllCaps="false"
+
             android:layout_marginTop="@dimen/size12"
             app:layout_constraintLeft_toLeftOf="@id/lnFuntion"
             app:layout_constraintRight_toRightOf="@id/lnFuntion"
             app:layout_constraintTop_toBottomOf="@id/lnFuntion"
-            />
+            >
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="horizontal"
+                >
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toStartOf="@+id/tv_blower"
+                    android:src="@drawable/ic_fan006"/>
+                <TextView
+                    android:id="@+id/tv_blower"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/size8"
+                    android:layout_gravity="center_vertical"
+                    android:text="@string/blower_h"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    />
+            </LinearLayout>
+
+
+        </RelativeLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/size20"
             android:layout_marginTop="@dimen/size12"
-            android:background="@drawable/bg_border_cont_home"
+            android:background="@drawable/bg_click_fun_home"
             android:orientation="vertical"
             android:padding="@dimen/size20"
             app:layout_constraintEnd_toEndOf="parent"
@@ -127,10 +153,11 @@
                 style="@style/TextView_Headline2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="#2E38FF"
                 android:text="@string/volume" />
 
             <TextView
-                style="@style/TextView_Body2"
+                android:textColor="#7C7C7C"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/set_maximum_volume_for_better_result" />

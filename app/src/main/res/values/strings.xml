@@ -74,5 +74,10 @@
     <string name="rate_title">We need your review to improve the application</string>
     <string name="please_rate">Please rate now</string>
     <string name="onboarding_intro3">Blow out the candle with this Speaker</string>
+    <string name="blower_h">BLOWER</string>
+    <string name="txt_medium">Medium</string>
+    <string name="txt_high">High</string>
+    <string name="play">Play</string>
+    <string name="pause">Pause</string>
 
 </resources>

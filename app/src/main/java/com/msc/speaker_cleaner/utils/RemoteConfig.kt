@@ -78,7 +78,7 @@ class RemoteConfig {
     private fun putBooleanToSP(remoteConfig: FirebaseRemoteConfig, name: String) {
         val spManager = App.instance?.applicationContext?.let { SpManager.getInstance(it) }
         val values = remoteConfig.getBoolean(name)
-        spManager?.putBoolean(name, values)
+        spManager?.putBoolean(name, false)
         Log.i(TAG, "$name : $values")
     }
 

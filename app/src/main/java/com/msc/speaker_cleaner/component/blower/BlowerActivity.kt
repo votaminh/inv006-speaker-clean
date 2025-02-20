@@ -155,7 +155,7 @@ class BlowerActivity : BaseActivity<ActivityCandleBlowerBinding>() {
         }
 
         if(isRunning){
-            rotateViewContinuously(viewBinding.imvPropeller, (percent * 100).toInt())
+
         }else{
             val v = ValueAnimator.ofFloat(prePecent, MIN_PERCENT)
             v.setDuration(3000)
@@ -163,7 +163,6 @@ class BlowerActivity : BaseActivity<ActivityCandleBlowerBinding>() {
                 val percent = it.animatedValue as Float
                 Log.i("gdsgxx", "animationIndicatorTo: " + percent)
                 setPercentAudio(percent * 100)
-                rotateViewContinuously(viewBinding.imvPropeller, (percent * 100).toInt())
             }
             v.addListener(object : Animator.AnimatorListener{
                 override fun onAnimationStart(p0: Animator) {

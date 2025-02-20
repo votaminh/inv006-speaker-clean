@@ -41,10 +41,10 @@ class ArcProgressView @JvmOverloads constructor(
         val right = (diameter / 2) + radius
         val bottom = (height / 2) + radius
 
-        canvas.drawArc(left, top, right, bottom, 170f, 200f, false, paint)
+        canvas.drawArc(left, top, right, bottom, 270f, 360f, false, paint)
 
         paint.color = ContextCompat.getColor(context, R.color.app_main)
-        canvas.drawArc(left, top, right, bottom, 170f, maxOf(0.3f, progress * 2.0f), false, paint)
+        canvas.drawArc(left, top, right, bottom, 270f, maxOf(3.6f, progress * 3.6f), false, paint)
     }
 
     override fun onSizeChanged(w: Int, h: Int, oldw: Int, oldh: Int) {
@@ -90,7 +90,6 @@ class ArcProgressView @JvmOverloads constructor(
     fun setProgress(value: Float) {
         progress = when {
             value < 0f -> 0f
-            value > 100f -> 100f
             else -> value
         }
         invalidate()

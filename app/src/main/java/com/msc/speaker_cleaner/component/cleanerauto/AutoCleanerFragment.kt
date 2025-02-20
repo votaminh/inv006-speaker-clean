@@ -61,15 +61,17 @@ class AutoCleanerFragment : BaseFragment<FragmentAutoCleanerBinding>() {
             stateAudio.observe(requireActivity()) {
                 when (it) {
                     StateAudio.PLAYING -> {
-                        viewBinding.btnPlayAndPause.setImageResource(R.drawable.ic_pause)
+                        viewBinding.imvPlayAndPause.setImageResource(R.drawable.ic_pause006)
+                        viewBinding.tvPlayAndPause.setText(R.string.pause)
                         viewBinding.tvContAuto.visibility = View.VISIBLE
                         viewBinding.lnBtnFrontEar.visibility = View.GONE
                     }
 
                     StateAudio.STOP -> {
-                        viewBinding.btnPlayAndPause.setImageResource(R.drawable.ic_play)
+                        viewBinding.imvPlayAndPause.setImageResource(R.drawable.ic_play006)
+                        viewBinding.tvPlayAndPause.setText(R.string.play)
                         viewBinding.tvContAuto.visibility = View.GONE
-                        viewBinding.lnBtnFrontEar.visibility = View.VISIBLE
+                        viewBinding.lnBtnFrontEar.visibility = View.GONE
                     }
                 }
             }

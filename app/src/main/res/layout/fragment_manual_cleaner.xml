@@ -30,10 +30,10 @@
                 android:layout_height="match_parent">
 
                 <ImageView
-                    android:layout_width="@dimen/size150"
-                    android:layout_height="@dimen/size150"
+                    android:layout_width="@dimen/size200"
+                    android:layout_height="@dimen/size200"
                     android:layout_centerInParent="true"
-                    android:src="@mipmap/img_manual" />
+                    android:src="@drawable/bg_manual" />
 
                 <TextView
                     android:id="@+id/tvHZ"
@@ -42,7 +42,7 @@
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
                     android:text="100 Hz"
-                    android:textColor="@color/text" />
+                    android:textColor="@color/white" />
             </RelativeLayout>
 
             <TextView
@@ -61,6 +61,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/size20"
                 android:gravity="center"
+                android:background="@drawable/bg_sw_button006"
                 android:orientation="horizontal">
 
                 <androidx.appcompat.widget.AppCompatButton
@@ -68,7 +69,8 @@
                     style="@style/TextView_Body4"
                     android:layout_width="@dimen/size130"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="@dimen/size10"
+                    android:layout_marginHorizontal="@dimen/size2"
+                    android:layout_marginVertical="@dimen/size3"
                     android:background="@drawable/select_btn_front_ear"
                     android:elevation="0dp"
                     android:stateListAnimator="@null"
@@ -81,7 +83,7 @@
                     android:layout_width="@dimen/size130"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/size10"
-                    android:background="@drawable/select_btn_front_ear"
+                    android:background="@color/transparent"
                     android:elevation="0dp"
                     android:stateListAnimator="@null"
                     android:text="@string/ear"
@@ -103,7 +105,12 @@
             app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
 
             <TextView
-                style="@style/TextView_Headline2"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:textColor="#2E38FF"
+                android:textSize="16sp"
+                android:fontFamily="@font/be_vn_medium"
+                android:textStyle="bold"
                 android:text="@string/frequency" />
 
             <SeekBar
@@ -126,19 +133,35 @@
                 app:layout_constraintStart_toStartOf="parent" />
 
             <RelativeLayout
-                android:layout_width="@dimen/size50"
-                android:layout_height="@dimen/size50"
+                android:id="@+id/btnPlayAndPause"
+                android:layout_width="@dimen/size152"
+                android:layout_height="@dimen/size56"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="@dimen/size10"
+                android:background="@drawable/select_btn_front_ear"
+                android:layout_marginTop="@dimen/size18"
                 >
-                <androidx.appcompat.widget.AppCompatImageButton
-                    android:id="@+id/btnPlayAndPause"
-                    android:layout_width="@dimen/size40"
-                    android:layout_height="@dimen/size40"
-                    android:background="@drawable/bg_btn_play_and_pause"
-                    android:src="@drawable/ic_play"
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
-                    />
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:id="@+id/imvPlayAndPause"
+                        android:layout_width="@dimen/size40"
+                        android:layout_height="@dimen/size40"
+                        android:src="@drawable/ic_play006"
+                        />
+                    <TextView
+                        android:id="@+id/tvPlayAndPause"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/play"
+                        android:layout_marginStart="@dimen/size12"
+                        android:textColor="#2E38FF"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="@dimen/size18"/>
+                </LinearLayout>
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
