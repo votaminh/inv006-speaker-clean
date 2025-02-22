@@ -58,5 +58,10 @@
             app:layout_constraintBottom_toBottomOf="@+id/tv_title_language"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/tv_title_language" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#FF8300"
+            app:layout_constraintBottom_toBottomOf="parent"/>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -196,8 +196,8 @@ class MainActivity : BaseActivity<ActivityMainBinding>(), OnTabChangeListener {
         buttons.forEachIndexed { index, button ->
             val drawable = button.compoundDrawablesRelative[1]
             if (index == position) {
-                button.setTextColor(getColor(R.color.app_main))
-                drawable.setTint(ContextCompat.getColor(this, R.color.app_main))
+                button.setTextColor(getColor(R.color.blue_main_006))
+                drawable.setTint(ContextCompat.getColor(this, R.color.blue_main_006))
             } else {
                 button.setTextColor(getColor(R.color.text1))
                 drawable.setTint(ContextCompat.getColor(this, R.color.text1))

@@ -49,11 +49,11 @@ class VibrateCleanerFragment : BaseFragment<FragmentVibrateCleanerBinding>() {
             stateLive.observe(requireActivity()) {
                 when (it) {
                     StateVibrate.PLAYING -> {
-                        viewBinding.btnPlayAndPause.setImageResource(R.drawable.ic_pause)
+                        viewBinding.imvPlayAndPause.setImageResource(R.drawable.ic_pause006)
                     }
 
                     StateVibrate.STOP -> {
-                        viewBinding.btnPlayAndPause.setImageResource(R.drawable.ic_play)
+                        viewBinding.imvPlayAndPause.setImageResource(R.drawable.ic_play006)
                     }
                 }
             }
@@ -68,13 +68,17 @@ class VibrateCleanerFragment : BaseFragment<FragmentVibrateCleanerBinding>() {
             intensityLive.observe(requireActivity()) {
                 when (it) {
                     IntensityVibrate.NORMAL -> {
-                        viewBinding.btnNormal.isSelected = true
-                        viewBinding.btnStrong.isSelected = false
+                        viewBinding.btnNormal.setBackgroundResource(R.drawable.bg_sellect_button006)
+                        viewBinding.btnStrong.setBackgroundResource(R.color.transparent)
+                        viewBinding.btnNormal.setTextColor(requireActivity().getColor(R.color.black))
+                        viewBinding.btnStrong.setTextColor(requireActivity().getColor(R.color.white))
                     }
 
                     IntensityVibrate.STRONG -> {
-                        viewBinding.btnNormal.isSelected = false
-                        viewBinding.btnStrong.isSelected = true
+                        viewBinding.btnNormal.setBackgroundResource(R.color.transparent)
+                        viewBinding.btnStrong.setBackgroundResource(R.drawable.bg_sellect_button006)
+                        viewBinding.btnNormal.setTextColor(requireActivity().getColor(R.color.white))
+                        viewBinding.btnStrong.setTextColor(requireActivity().getColor(R.color.black))
                     }
                 }
             }

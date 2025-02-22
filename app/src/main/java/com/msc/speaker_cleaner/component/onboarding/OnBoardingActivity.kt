@@ -10,7 +10,7 @@ import com.msc.speaker_cleaner.admob.NameRemoteAdmob
 import com.msc.speaker_cleaner.base.activity.BaseActivity
 import com.msc.speaker_cleaner.R
 import com.msc.speaker_cleaner.admob.NativeAdmob
-import com.msc.speaker_cleaner.component.permission.PermissionActivity
+import com.msc.speaker_cleaner.component.main.MainActivity
 import com.msc.speaker_cleaner.databinding.ActivityOnboardingBinding
 import com.msc.speaker_cleaner.utils.NativeAdmobUtils
 import com.msc.speaker_cleaner.utils.NetworkUtil
@@ -62,7 +62,7 @@ class OnBoardingActivity : BaseActivity<ActivityOnboardingBinding>() {
                 if (currentPosition < onBoardingAdapter.getListData().size - 1) {
                     vpOnBoarding.setCurrentItem(currentPosition + 1, true)
                 } else {
-                    PermissionActivity.start(this@OnBoardingActivity)
+                    MainActivity.start(this@OnBoardingActivity)
                     finish()
                 }
             }
@@ -70,15 +70,15 @@ class OnBoardingActivity : BaseActivity<ActivityOnboardingBinding>() {
             dotIndicator.attachTo(vpOnBoarding)
             onBoardingAdapter.setData(listOf(
                 OnBoarding(
-                    R.mipmap.img_onb1,
+                    R.drawable.ob1006,
                     R.string.onboarding_intro1
                 ),
                 OnBoarding(
-                    R.mipmap.img_onb2,
+                    R.drawable.ob2006,
                     R.string.onboarding_intro2
                 ),
                 OnBoarding(
-                    R.drawable.img_onb3,
+                    R.drawable.ob3006,
                     R.string.onboarding_intro3
                 )
             ))

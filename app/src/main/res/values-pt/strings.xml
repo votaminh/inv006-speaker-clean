@@ -73,4 +73,9 @@
     <string name="rate_title">Precisamos da sua avaliação para melhorar o aplicativo</string>
     <string name="please_rate">Avalie agora</string>
     <string name="onboarding_intro3">Apague a vela com este alto-falante</string>
+    <string name="blower_h">SOPRADOR</string>
+    <string name="txt_medium">Médio</string>
+    <string name="txt_high">Alto</string>
+    <string name="play">Reproduzir</string>
+    <string name="pause">Pausar</string>
 </resources>

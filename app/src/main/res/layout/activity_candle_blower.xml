@@ -19,12 +19,10 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <androidx.appcompat.widget.AppCompatImageButton
+        <ImageView
             android:id="@+id/btnBack"
-            android:layout_width="@dimen/size36"
-            android:layout_height="@dimen/size36"
-            android:layout_marginEnd="@dimen/size20"
-            android:background="@drawable/background_circle_button_selector"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:src="@drawable/ic_back_new"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -32,10 +30,12 @@
 
         <TextView
             android:id="@+id/tvTitleMain"
-            style="@style/TextView_Headline1"
+            android:textSize="18sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
+            android:textColor="@color/black"
+            android:fontFamily="@font/be_vn_medium"
             android:layout_marginStart="18sp"
             android:text="@string/txt_candle_blower"
              />

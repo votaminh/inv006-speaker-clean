@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name" translatable="false">Speaker Cleaner</string>
+    <string name="app_name" translatable="false">Sound Boost</string>
 
     <string name="english">Tiếng Anh</string>
     <string name="vietnamese">Tiếng Việt</string>
@@ -73,4 +73,9 @@
     <string name="rate_title">Chúng tôi cần đánh giá của bạn để cải thiện ứng dụng</string>
     <string name="please_rate">Vui lòng đánh giá ngay</string>
     <string name="onboarding_intro3">Thổi tắt ngọn nến bằng Loa này</string>
+    <string name="blower_h">QUẠT THỔI</string>
+    <string name="txt_medium">Trung bình</string>
+    <string name="txt_high">Cao</string>
+    <string name="play">Phát</string>
+    <string name="pause">Tạm dừng</string>
 </resources>

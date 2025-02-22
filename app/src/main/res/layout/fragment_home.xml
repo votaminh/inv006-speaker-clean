@@ -38,7 +38,6 @@
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btnAutoClean"
                 style="@style/TextView_Body3"
-                android:drawableTint="@color/app_main"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -57,7 +56,6 @@
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btnManualClean"
                 style="@style/TextView_Body3"
-                android:drawableTint="@color/app_main"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="@dimen/size12"
@@ -83,7 +81,6 @@
                 android:drawableTop="@drawable/ic_vibrate_cleaner006"
                 android:drawablePadding="@dimen/size6"
                 android:elevation="0dp"
-                android:drawableTint="@color/app_main"
                 android:paddingTop="@dimen/size12"
                 android:paddingBottom="@dimen/size8"
                 android:stateListAnimator="@null"

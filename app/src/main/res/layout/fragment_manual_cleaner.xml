@@ -53,40 +53,53 @@
                 android:layout_marginTop="@dimen/size20"
                 android:gravity="center"
                 android:text="@string/speaker"
-                android:textColor="@color/text2" />
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="@color/blue_main_006" />
 
             <LinearLayout
                 android:id="@+id/lnBtnFontEar"
-                android:layout_width="match_parent"
+                android:layout_width="@dimen/size220"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/size20"
+                android:weightSum="2"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/size12"
                 android:gravity="center"
                 android:background="@drawable/bg_sw_button006"
                 android:orientation="horizontal">
 
-                <androidx.appcompat.widget.AppCompatButton
+                <TextView
                     android:id="@+id/btnFront"
-                    style="@style/TextView_Body4"
-                    android:layout_width="@dimen/size130"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="@dimen/size2"
-                    android:layout_marginVertical="@dimen/size3"
-                    android:background="@drawable/select_btn_front_ear"
+                    android:fontFamily="@font/be_vn_medium"
+                    android:layout_weight="1"
+                    android:layout_margin="4dp"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/bg_sellect_button006"
                     android:elevation="0dp"
+                    android:gravity="center"
+                    android:textSize="18sp"
+                    android:paddingVertical="8dp"
                     android:stateListAnimator="@null"
+                    android:textColor="@color/black"
                     android:text="@string/front"
                     android:textAllCaps="false" />
 
-                <androidx.appcompat.widget.AppCompatButton
+                <TextView
                     android:id="@+id/btnEar"
-                    style="@style/TextView_Body4"
-                    android:layout_width="@dimen/size130"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/size10"
+                    android:fontFamily="@font/be_vn_medium"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_margin="@dimen/size4"
+                    android:layout_height="match_parent"
                     android:background="@color/transparent"
+                    android:gravity="center"
                     android:elevation="0dp"
+                    android:textSize="18sp"
+                    android:paddingVertical="8dp"
                     android:stateListAnimator="@null"
                     android:text="@string/ear"
+                    android:textColor="@color/white"
                     android:textAllCaps="false" />
             </LinearLayout>
         </LinearLayout>
@@ -107,9 +120,8 @@
             <TextView
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
-                android:textColor="#2E38FF"
                 android:textSize="16sp"
-                android:fontFamily="@font/be_vn_medium"
+                android:textColor="@color/blue_main_006"
                 android:textStyle="bold"
                 android:text="@string/frequency" />
 

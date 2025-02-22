@@ -115,15 +115,19 @@ class ManualCleanerFragment : BaseFragment<FragmentManualCleanerBinding>() {
                 when (it) {
                     SourceAudio.FRONT -> {
                         viewBinding.run {
-                            btnFront.isSelected = true
-                            btnEar.isSelected = false
+                            btnFront.setBackgroundResource(R.drawable.bg_sellect_button006)
+                            btnEar.setBackgroundResource(R.color.transparent)
+                            btnFront.setTextColor(requireActivity().getColor(R.color.black))
+                            btnEar.setTextColor(requireActivity().getColor(R.color.white))
                         }
                     }
 
                     SourceAudio.EAR -> {
                         viewBinding.run {
-                            btnFront.isSelected = false
-                            btnEar.isSelected = true
+                            btnFront.setBackgroundResource(R.color.transparent)
+                            btnEar.setBackgroundResource(R.drawable.bg_sellect_button006)
+                            btnFront.setTextColor(requireActivity().getColor(R.color.white))
+                            btnEar.setTextColor(requireActivity().getColor(R.color.black))
                         }
                     }
                 }

@@ -33,12 +33,12 @@
         <TextView
             android:id="@+id/tvTitleMain"
             style="@style/TextView_Headline1"
-            android:layout_width="@dimen/size0"
             android:layout_marginStart="@dimen/size20"
             android:text="@string/speaker_cleaner"
+            android:gravity="center"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/btnSetting"
             app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

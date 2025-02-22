@@ -72,4 +72,9 @@
     <string name="rate_title">Nous avons besoin de votre avis pour améliorer l\'application</string>
     <string name="please_rate">Veuillez noter maintenant</string>
     <string name="onboarding_intro3">Soufflez la bougie avec cette enceinte</string>
+    <string name="blower_h">SOUFFLEUR</string>
+    <string name="txt_medium">Moyen</string>
+    <string name="txt_high">Élevé</string>
+    <string name="play">Jouer</string>
+    <string name="pause">Pause</string>
 </resources>

@@ -83,7 +83,10 @@ class AutoCleanerFragment : BaseFragment<FragmentAutoCleanerBinding>() {
                 if (it == 100) {
                     activity?.let {
                         (activity as MainActivity).showInter{
-                            TestSpeakerActivity.start(requireActivity())
+//                            TestSpeakerActivity.start(requireActivity())
+                            kotlin.runCatching {
+                                viewModel.stopAudio()
+                            }
                         }
                     }
                 }

@@ -73,4 +73,9 @@
     <string name="rate_title">ऐप को बेहतर बनाने के लिए हमें आपकी समीक्षा की आवश्यकता है</string>
     <string name="please_rate">कृपया अभी रेटिंग दें</string>
     <string name="onboarding_intro3">ब्लो आउट इस स्पीकर के साथ मोमबत्ती</string>
+    <string name="blower_h">ब्लोअर</string>
+    <string name="txt_medium">मध्यम</string>
+    <string name="txt_high">उच्च</string>
+    <string name="play">चलाएं</string>
+    <string name="pause">रोकें</string>
 </resources>
