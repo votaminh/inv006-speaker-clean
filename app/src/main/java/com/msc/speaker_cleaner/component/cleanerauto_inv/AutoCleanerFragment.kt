@@ -1,4 +1,4 @@
-package com.msc.speaker_cleaner.component.cleanerauto
+package com.msc.speaker_cleaner.component.cleanerauto_inv
 
 import android.view.View
 import android.view.ViewGroup
@@ -6,7 +6,6 @@ import androidx.fragment.app.viewModels
 import com.flash.light.base.fragment.BaseFragment
 import com.msc.speaker_cleaner.R
 import com.msc.speaker_cleaner.component.main.MainActivity
-import com.msc.speaker_cleaner.component.testspeaker.activity.TestSpeakerActivity
 import com.msc.speaker_cleaner.databinding.FragmentAutoCleanerBinding
 import com.msc.speaker_cleaner.domain.layer.SourceAudio
 import com.msc.speaker_cleaner.domain.layer.StateAudio

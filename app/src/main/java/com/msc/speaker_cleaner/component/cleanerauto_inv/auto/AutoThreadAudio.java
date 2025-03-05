@@ -1,4 +1,4 @@
-package com.msc.speaker_cleaner.component.cleanerauto.auto;
+package com.msc.speaker_cleaner.component.cleanerauto_inv.auto;
 
 import android.content.Context;
 import android.media.AudioManager;

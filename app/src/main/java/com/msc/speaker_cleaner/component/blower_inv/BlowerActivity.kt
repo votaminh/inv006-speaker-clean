@@ -1,4 +1,4 @@
-package com.msc.speaker_cleaner.component.blower
+package com.msc.speaker_cleaner.component.blower_inv
 
 import android.animation.Animator
 import android.animation.ObjectAnimator
@@ -16,8 +16,8 @@ import com.msc.speaker_cleaner.R
 import com.msc.speaker_cleaner.admob.NameRemoteAdmob
 import com.msc.speaker_cleaner.admob.RewardAdmob
 import com.msc.speaker_cleaner.base.activity.BaseActivity
-import com.msc.speaker_cleaner.component.cleanerauto.auto.AutoThreadAudio
-import com.msc.speaker_cleaner.component.cleanerauto.auto.rv2
+import com.msc.speaker_cleaner.component.cleanerauto_inv.auto.AutoThreadAudio
+import com.msc.speaker_cleaner.component.cleanerauto_inv.auto.rv2
 import com.msc.speaker_cleaner.databinding.ActivityCandleBlowerBinding
 import com.msc.speaker_cleaner.utils.AppEx.range
 import com.msc.speaker_cleaner.utils.SpManager

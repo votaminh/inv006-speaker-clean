@@ -1,4 +1,4 @@
-package com.msc.speaker_cleaner.component.cleanermanual
+package com.msc.speaker_cleaner.component.cleanermanual_inv
 
 import android.content.Context
 import androidx.lifecycle.Lifecycle
@@ -6,9 +6,9 @@ import androidx.lifecycle.LifecycleObserver
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.OnLifecycleEvent
 import androidx.lifecycle.ViewModel
-import com.msc.speaker_cleaner.component.cleanerauto.auto.AutoThreadAudio
+import com.msc.speaker_cleaner.component.cleanerauto_inv.auto.AutoThreadAudio
 import com.msc.speaker_cleaner.domain.layer.StateAudio
-import com.msc.speaker_cleaner.component.cleanerauto.auto.rv2
+import com.msc.speaker_cleaner.component.cleanerauto_inv.auto.rv2
 import com.msc.speaker_cleaner.domain.layer.SourceAudio
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext

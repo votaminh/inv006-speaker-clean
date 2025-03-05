@@ -1,4 +1,4 @@
-package com.msc.speaker_cleaner.component.cleanervibrate
+package com.msc.speaker_cleaner.component.cleanervibrate_inv
 
 import android.content.Context
 import android.os.Build

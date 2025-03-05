@@ -1,14 +1,13 @@
-package com.msc.speaker_cleaner.component.cleanerauto
+package com.msc.speaker_cleaner.component.cleanerauto_inv
 
 import android.animation.Animator
 import android.animation.ValueAnimator
 import android.animation.ValueAnimator.AnimatorUpdateListener
 import android.content.Context
-import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.msc.speaker_cleaner.component.cleanerauto.auto.AutoThreadAudio
-import com.msc.speaker_cleaner.component.cleanerauto.auto.rv2
+import com.msc.speaker_cleaner.component.cleanerauto_inv.auto.AutoThreadAudio
+import com.msc.speaker_cleaner.component.cleanerauto_inv.auto.rv2
 import com.msc.speaker_cleaner.domain.layer.SourceAudio
 import com.msc.speaker_cleaner.domain.layer.StateAudio
 import dagger.hilt.android.lifecycle.HiltViewModel

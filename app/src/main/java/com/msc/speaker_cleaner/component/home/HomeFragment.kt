@@ -5,20 +5,16 @@ import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
 import android.media.AudioManager
-import android.util.Log
 import android.view.ViewGroup
 import android.widget.SeekBar
-import androidx.viewpager2.widget.ViewPager2
 import com.flash.light.base.fragment.BaseFragment
 import com.msc.speaker_cleaner.R
-import com.msc.speaker_cleaner.component.blower.BlowerActivity
+import com.msc.speaker_cleaner.component.blower_inv.BlowerActivity
 import com.msc.speaker_cleaner.component.main.MainActivity
 import com.msc.speaker_cleaner.databinding.FragmentHomeBinding
 import com.msc.speaker_cleaner.domain.layer.BannerModel
 import com.msc.speaker_cleaner.interfaces.OnTabChangeListener
 import com.msc.speaker_cleaner.utils.Constant.CURRENT_VOLUME
-import java.util.Timer
-import kotlin.concurrent.schedule
 
 
 class HomeFragment : BaseFragment<FragmentHomeBinding>() {

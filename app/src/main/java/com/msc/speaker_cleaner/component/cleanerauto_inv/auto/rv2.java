@@ -1,4 +1,4 @@
-package com.msc.speaker_cleaner.component.cleanerauto.auto;
+package com.msc.speaker_cleaner.component.cleanerauto_inv.auto;
 
 public final class rv2 {
     public double a = 440.0d;
