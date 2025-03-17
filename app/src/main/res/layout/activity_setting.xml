@@ -17,7 +17,8 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/size20"
             android:src="@drawable/ic_back_new"
-            android:layout_centerVertical="true"/>
+            android:layout_centerVertical="true"
+            app:tint="#2E38FF" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -138,6 +139,7 @@
         android:gravity="center_vertical"
         android:foreground="?attr/selectableItemBackgroundBorderless"
         android:layout_marginHorizontal="@dimen/size20"
+        android:visibility="gone"
         >
 
         <ImageView

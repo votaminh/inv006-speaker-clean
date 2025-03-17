@@ -19,16 +19,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <androidx.appcompat.widget.AppCompatImageButton
+        <ImageView
             android:id="@+id/btnSetting"
             android:layout_width="@dimen/size36"
             android:layout_height="@dimen/size36"
             android:layout_marginEnd="@dimen/size20"
-            android:background="@drawable/background_circle_button_selector"
-            android:src="@drawable/ic_settings"
+            android:src="@drawable/ic_setting"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            android:padding="@dimen/size5"
+            app:tint="#2E38FF" />
 
         <TextView
             android:id="@+id/tvTitleMain"
