@@ -1,21 +1,21 @@
 {
   "project_info": {
-    "project_number": "12231051434",
-    "project_id": "speaker-cleaner-ce398",
-    "storage_bucket": "speaker-cleaner-ce398.appspot.com"
+    "project_number": "360582772352",
+    "project_id": "speaker-clean",
+    "storage_bucket": "speaker-clean.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:12231051434:android:2f23050d3366414b2028d3",
+        "mobilesdk_app_id": "1:360582772352:android:91715bdd9050cc62f55865",
         "android_client_info": {
-          "package_name": "com.trn.speaker.cleaner.remove.water.cleanspkrwater.speakerdustremover"
+          "package_name": "com.msc.speaker.cleaner.remove.water.cleanspkrwater.speakerdustremover"
         }
       },
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyBSZ-X7LZJDmclhJV7bld6fZ38tjPao-6g"
+          "current_key": "AIzaSyDI3XupXWLtidhtr-m9rKswlVjwmBu0Lc8"
         }
       ],
       "services": {

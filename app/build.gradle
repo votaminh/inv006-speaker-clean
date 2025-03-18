@@ -12,7 +12,7 @@ android {
     compileSdk 34
 
     defaultConfig {
-        applicationId "com.trn.speaker.cleaner.remove.water.cleanspkrwater.speakerdustremover"
+        applicationId "com.msc.speaker.cleaner.remove.water.cleanspkrwater.speakerdustremover"
         minSdk 24
         targetSdk 34
         versionCode 25
