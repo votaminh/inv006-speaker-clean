@@ -9,7 +9,6 @@ import com.google.firebase.remoteconfig.FirebaseRemoteConfigException
 import com.google.firebase.remoteconfig.ktx.remoteConfig
 import com.google.firebase.remoteconfig.ktx.remoteConfigSettings
 import com.msc.speaker_cleaner.App
-import com.msc.speaker_cleaner.admob.NameRemoteAdmob
 
 class RemoteConfig {
 
@@ -62,16 +61,7 @@ class RemoteConfig {
     private fun updateConfig() {
         kotlin.runCatching {
             val remoteConfig = Firebase.remoteConfig
-            putBooleanToSP(remoteConfig, NameRemoteAdmob.INTER_SPLASH)
-            putBooleanToSP(remoteConfig, NameRemoteAdmob.INTER_HOME)
-            putBooleanToSP(remoteConfig, NameRemoteAdmob.NATIVE_LANGUAGE)
-            putBooleanToSP(remoteConfig, NameRemoteAdmob.NATIVE_ONBOARD)
-            putBooleanToSP(remoteConfig, NameRemoteAdmob.NATIVE_FEATURE)
-            putBooleanToSP(remoteConfig, NameRemoteAdmob.NATIVE_FULL_SCREEN)
-            putBooleanToSP(remoteConfig, NameRemoteAdmob.APP_RESUME)
-            putBooleanToSP(remoteConfig, NameRemoteAdmob.BANNER_COLAPSE)
-            putBooleanToSP(remoteConfig, NameRemoteAdmob.BANNER_SPLASH)
-            putBooleanToSP(remoteConfig, NameRemoteAdmob.REWARD_FEATURE)
+            putBooleanToSP(remoteConfig, "can_show_ads")
         }
     }
 

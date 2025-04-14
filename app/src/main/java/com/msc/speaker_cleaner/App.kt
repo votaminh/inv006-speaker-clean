@@ -14,7 +14,6 @@ import com.google.android.gms.ads.MobileAds
 import com.google.android.gms.ads.RequestConfiguration
 import com.google.firebase.FirebaseApp
 import com.inmobi.sdk.InMobiSdk
-import com.msc.speaker_cleaner.admob.NameRemoteAdmob
 import com.msc.speaker_cleaner.admob.OpenAdmob
 import com.msc.speaker_cleaner.utils.AppEx.getDeviceLanguage
 import com.msc.speaker_cleaner.utils.LocaleHelper
@@ -61,7 +60,7 @@ class App : Application(), Application.ActivityLifecycleCallbacks, DefaultLifecy
         val requestConfiguration = RequestConfiguration.Builder().build()
         MobileAds.setRequestConfiguration(requestConfiguration)
 
-        if(spManager.getBoolean(NameRemoteAdmob.APP_RESUME, true)){
+        if(spManager.canShowAds()){
             openAdmob = OpenAdmob(this, BuildConfig.open_resume)
         }
 
@@ -134,7 +133,7 @@ class App : Application(), Application.ActivityLifecycleCallbacks, DefaultLifecy
 
     override fun onStart(owner: LifecycleOwner) {
         super.onStart(owner)
-        if(spManager.getBoolean(NameRemoteAdmob.APP_RESUME, true)){
+        if(spManager.canShowAds()){
             openAdmob?.run {
                 currentActivity?.let { showAdIfAvailable(it) }
             }

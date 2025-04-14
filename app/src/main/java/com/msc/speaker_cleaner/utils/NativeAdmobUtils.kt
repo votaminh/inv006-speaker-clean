@@ -4,7 +4,6 @@ import android.annotation.SuppressLint
 import com.msc.m_utils.external.BaseAdmob
 import com.msc.speaker_cleaner.App
 import com.msc.speaker_cleaner.BuildConfig
-import com.msc.speaker_cleaner.admob.NameRemoteAdmob
 import com.msc.speaker_cleaner.admob.NativeAdmob
 
 class NativeAdmobUtils {
@@ -54,7 +53,7 @@ class NativeAdmobUtils {
         }
         fun loadNativePermission() {
             App.instance?.applicationContext?.let { context ->
-                if(SpManager.getInstance(context).getBoolean(NameRemoteAdmob.NATIVE_FEATURE, true)){
+                if(SpManager.getInstance(context).canShowAds()){
                     permissionNativeAdmob = NativeAdmob(
                         context,
                         BuildConfig.native_feature

@@ -5,7 +5,6 @@ import android.content.Intent
 import android.view.View
 import androidx.lifecycle.MutableLiveData
 import com.msc.m_utils.external.Ex.invisible
-import com.msc.speaker_cleaner.admob.NameRemoteAdmob
 import com.msc.speaker_cleaner.base.activity.BaseActivity
 import com.msc.speaker_cleaner.component.main.MainActivity
 import com.msc.speaker_cleaner.databinding.ActivityPermissonBinding
@@ -91,13 +90,13 @@ class PermissionActivity : BaseActivity<ActivityPermissonBinding>() {
             checkShowNextBtn()
         }
 
-        if(!spManager.getBoolean(NameRemoteAdmob.NATIVE_FEATURE, true)){
+        if(!spManager.canShowAds()){
             viewBinding.flAdplaceholder.visibility = View.GONE
         }
 
         NativeAdmobUtils.permissionNativeAdmob?.run {
             nativeAdLive.observe(this@PermissionActivity){
-                if(available() && spManager.getBoolean(NameRemoteAdmob.NATIVE_FEATURE, true)){
+                if(available() && spManager.canShowAds()){
                     showNative(viewBinding.flAdplaceholder, null)
                 }else{
                     viewBinding.flAdplaceholder.visibility = View.GONE

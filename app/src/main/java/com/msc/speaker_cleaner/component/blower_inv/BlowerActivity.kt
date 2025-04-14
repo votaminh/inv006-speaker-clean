@@ -13,7 +13,6 @@ import com.msc.m_utils.external.BaseAdmob
 import com.msc.m_utils.external.Ex.tintColorRes
 import com.msc.speaker_cleaner.BuildConfig
 import com.msc.speaker_cleaner.R
-import com.msc.speaker_cleaner.admob.NameRemoteAdmob
 import com.msc.speaker_cleaner.admob.RewardAdmob
 import com.msc.speaker_cleaner.base.activity.BaseActivity
 import com.msc.speaker_cleaner.component.cleanerauto_inv.auto.AutoThreadAudio
@@ -253,14 +252,14 @@ class BlowerActivity : BaseActivity<ActivityCandleBlowerBinding>() {
 
 
     private fun loadReward() {
-        if(SpManager.getInstance(this).getBoolean(NameRemoteAdmob.REWARD_FEATURE, true)){
+        if(SpManager.getInstance(this).canShowAds()){
             rewardAdmob = RewardAdmob(this, BuildConfig.reward_feature)
             rewardAdmob?.load(null)
         }
     }
 
     fun showReward(nextAction: (() -> Unit)?){
-        if(SpManager.getInstance(this).getBoolean(NameRemoteAdmob.REWARD_FEATURE, true) && rewardAdmob != null){
+        if(SpManager.getInstance(this).canShowAds() && rewardAdmob != null){
             rewardAdmob?.show(this, object : BaseAdmob.OnAdmobShowListener{
                 override fun onShow() {
                     nextAction?.invoke()

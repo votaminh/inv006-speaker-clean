@@ -6,7 +6,6 @@ import android.view.View
 import androidx.viewpager2.widget.ViewPager2
 import com.msc.m_utils.external.Ex.gone
 import com.msc.m_utils.external.Ex.visible
-import com.msc.speaker_cleaner.admob.NameRemoteAdmob
 import com.msc.speaker_cleaner.base.activity.BaseActivity
 import com.msc.speaker_cleaner.R
 import com.msc.speaker_cleaner.admob.NativeAdmob
@@ -150,7 +149,7 @@ class OnBoardingActivity : BaseActivity<ActivityOnboardingBinding>() {
         viewBinding.flAdplaceholder.visibility = View.GONE
         NativeAdmobUtils.onboardNativeAdmob1?.run {
             nativeAdLive?.observe(this@OnBoardingActivity){
-                if(available() && spManager.getBoolean(NameRemoteAdmob.NATIVE_ONBOARD, true)){
+                if(available() && spManager.canShowAds()){
                     if(currentPosition == 0){
                         viewBinding.flAdplaceholder.visibility = View.VISIBLE
                         intNativeToView(this)
@@ -160,7 +159,7 @@ class OnBoardingActivity : BaseActivity<ActivityOnboardingBinding>() {
         }
         NativeAdmobUtils.onboardNativeAdmob2?.run {
             nativeAdLive?.observe(this@OnBoardingActivity){
-                if(available() && spManager.getBoolean(NameRemoteAdmob.NATIVE_ONBOARD, true)){
+                if(available() && spManager.canShowAds()){
                     if(currentPosition == 1){
                         viewBinding.flAdplaceholder.visibility = View.VISIBLE
                         intNativeToView(this)
@@ -170,7 +169,7 @@ class OnBoardingActivity : BaseActivity<ActivityOnboardingBinding>() {
         }
         NativeAdmobUtils.onboardNativeAdmob3?.run {
             nativeAdLive?.observe(this@OnBoardingActivity){
-                if(available() && spManager.getBoolean(NameRemoteAdmob.NATIVE_ONBOARD, true)){
+                if(available() && spManager.canShowAds()){
                     if(currentPosition == 2){
                         viewBinding.flAdplaceholder.visibility = View.VISIBLE
                         intNativeToView(this)
@@ -189,7 +188,7 @@ class OnBoardingActivity : BaseActivity<ActivityOnboardingBinding>() {
     }
 
     private fun addAdsToOnboard(it: NativeAdmob?) {
-        if(spManager.getBoolean(NameRemoteAdmob.NATIVE_FULL_SCREEN, true)){
+        if(spManager.canShowAds()){
             val adsOnboard = OnBoarding(
                 OnBoarding.FULL_NATIVE_FLAG,
                 OnBoarding.FULL_NATIVE_FLAG,

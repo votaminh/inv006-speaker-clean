@@ -4,15 +4,16 @@ import com.msc.m_utils.external.UMPUtils
 import com.msc.speaker_cleaner.base.activity.BaseActivity
 import com.msc.speaker_cleaner.component.splash.SplashActivity
 import com.msc.speaker_cleaner.App
+import com.msc.speaker_cleaner.databinding.ActivitySplashBinding
 import com.msc.speaker_cleaner.databinding.ActivityUmpBinding
 import com.msc.speaker_cleaner.utils.RemoteConfig
 import com.msc.speaker_cleaner.utils.SpManager
 
 
-class UMPActivity : BaseActivity<ActivityUmpBinding>() {
+class UMPActivity : BaseActivity<ActivitySplashBinding>() {
     private val TAG = "ump_activity"
 
-    override fun provideViewBinding(): ActivityUmpBinding = ActivityUmpBinding.inflate(layoutInflater)
+    override fun provideViewBinding(): ActivitySplashBinding = ActivitySplashBinding.inflate(layoutInflater)
 
     override fun initData() {
         super.initData()

@@ -13,7 +13,6 @@ import com.msc.speaker_cleaner.R
 import com.msc.speaker_cleaner.admob.BannerAdmob
 import com.msc.speaker_cleaner.admob.CollapsiblePositionType
 import com.msc.speaker_cleaner.admob.InterAdmob
-import com.msc.speaker_cleaner.admob.NameRemoteAdmob
 import com.msc.speaker_cleaner.admob.RewardAdmob
 import com.msc.speaker_cleaner.base.activity.BaseActivity
 import com.msc.speaker_cleaner.component.setting.SettingActivity
@@ -112,14 +111,14 @@ class MainActivity : BaseActivity<ActivityMainBinding>(), OnTabChangeListener {
     }
 
     private fun loadReward() {
-        if(SpManager.getInstance(this).getBoolean(NameRemoteAdmob.REWARD_FEATURE, true)){
+        if(SpManager.getInstance(this).canShowAds()){
             rewardAdmob = RewardAdmob(this, BuildConfig.reward_feature)
             rewardAdmob?.load(null)
         }
     }
 
     fun showReward(nextAction: (() -> Unit)?){
-        if(SpManager.getInstance(this).getBoolean(NameRemoteAdmob.REWARD_FEATURE, true) && rewardAdmob != null){
+        if(SpManager.getInstance(this).canShowAds() && rewardAdmob != null){
             rewardAdmob?.show(this@MainActivity, object : BaseAdmob.OnAdmobShowListener{
                 override fun onShow() {
                     nextAction?.invoke()
@@ -138,7 +137,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>(), OnTabChangeListener {
     }
 
     private fun showBanner() {
-        if(SpManager.getInstance(this).getBoolean(NameRemoteAdmob.BANNER_COLAPSE, true)){
+        if(SpManager.getInstance(this).canShowAds()){
             val bannerAdmob = BannerAdmob(this, CollapsiblePositionType.BOTTOM)
             bannerAdmob.showBanner(this@MainActivity, BuildConfig.banner_collap, viewBinding.banner)
         }else{
@@ -147,7 +146,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>(), OnTabChangeListener {
     }
 
     private fun loadInter() {
-        if(SpManager.getInstance(this@MainActivity).getBoolean(NameRemoteAdmob.INTER_HOME, true)){
+        if(SpManager.getInstance(this@MainActivity).canShowAds()){
             interAdmob = InterAdmob(this, BuildConfig.inter_home)
             interAdmob?.load(null)
         }

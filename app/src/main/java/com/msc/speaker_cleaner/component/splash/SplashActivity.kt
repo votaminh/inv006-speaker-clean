@@ -9,7 +9,6 @@ import com.msc.speaker_cleaner.BuildConfig
 import com.msc.speaker_cleaner.admob.BannerAdmob
 import com.msc.speaker_cleaner.admob.CollapsiblePositionType
 import com.msc.speaker_cleaner.admob.InterAdmob
-import com.msc.speaker_cleaner.admob.NameRemoteAdmob
 import com.msc.speaker_cleaner.base.activity.BaseActivity
 import com.msc.speaker_cleaner.component.language.LanguageActivity
 import com.msc.speaker_cleaner.component.main.MainActivity
@@ -61,7 +60,7 @@ class SplashActivity : BaseActivity<ActivitySplashBinding>() {
 
     override fun initViews() {
         if (spManager.getShowOnBoarding() && NetworkUtil.isOnline) {
-            if (spManager.getBoolean(NameRemoteAdmob.NATIVE_LANGUAGE, true)) {
+            if (spManager.canShowAds()) {
                 NativeAdmobUtils.loadNativeLanguage()
             }
         }
@@ -71,7 +70,7 @@ class SplashActivity : BaseActivity<ActivitySplashBinding>() {
 
     private fun runProgress() {
         showBanner()
-        if (spManager.getBoolean(NameRemoteAdmob.INTER_SPLASH, true)) {
+        if (spManager.canShowAds()) {
             loadShowOpenAds(successAction = {
                 gotoMainScreen()
             }, failAction = {
@@ -133,7 +132,7 @@ class SplashActivity : BaseActivity<ActivitySplashBinding>() {
     }
 
     private fun showBanner() {
-        if(spManager.getBoolean(NameRemoteAdmob.BANNER_SPLASH, true)){
+        if(spManager.canShowAds()){
             val bannerAdmob = BannerAdmob(this, CollapsiblePositionType.NONE)
             bannerAdmob.showBanner(this@SplashActivity, BuildConfig.banner_splash, viewBinding.banner)
         }else{

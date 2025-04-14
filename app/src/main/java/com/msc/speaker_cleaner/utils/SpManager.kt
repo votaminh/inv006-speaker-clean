@@ -3,6 +3,7 @@ package com.msc.speaker_cleaner.utils
 import android.content.Context
 import android.content.SharedPreferences
 import com.google.gson.Gson
+import com.ironsource.tr
 import com.msc.speaker_cleaner.R
 import com.msc.speaker_cleaner.domain.layer.LanguageModel
 
@@ -52,6 +53,10 @@ class SpManager(private val preferences: SharedPreferences) {
         val editor = preferences.edit()
         editor.putString(key, value)
         editor.apply()
+    }
+
+    fun canShowAds() : Boolean {
+        return getBoolean("can_show_ads", true)
     }
 
     fun saveLanguage(languageModel: LanguageModel) {

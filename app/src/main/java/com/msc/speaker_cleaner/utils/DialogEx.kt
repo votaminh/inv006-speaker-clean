@@ -4,11 +4,9 @@ import android.app.Activity
 import android.app.AlertDialog
 import android.content.DialogInterface
 import android.view.LayoutInflater
-import android.view.View
 import androidx.lifecycle.LifecycleOwner
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.msc.speaker_cleaner.R
-import com.msc.speaker_cleaner.admob.NameRemoteAdmob
 import com.msc.speaker_cleaner.databinding.DialogExitBinding
 
 object DialogEx {

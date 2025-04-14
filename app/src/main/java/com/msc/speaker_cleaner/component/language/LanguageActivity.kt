@@ -7,7 +7,6 @@ import androidx.activity.viewModels
 import androidx.core.content.ContextCompat
 import com.facebook.shimmer.ShimmerFrameLayout
 import com.google.android.gms.ads.nativead.NativeAd
-import com.msc.speaker_cleaner.admob.NameRemoteAdmob
 import com.msc.speaker_cleaner.base.activity.BaseActivity
 import com.flash.light.component.language.LanguageAdapter
 import com.msc.m_utils.external.Ex.visible
@@ -80,7 +79,7 @@ class LanguageActivity : BaseActivity<ActivityLanguageBinding>() {
         }
 
         if (spManager.getShowOnBoarding() && NetworkUtil.isOnline) {
-            if (spManager.getBoolean(NameRemoteAdmob.NATIVE_ONBOARD, true)) {
+            if (spManager.canShowAds()) {
                 NativeAdmobUtils.loadNativeOnboard()
             }
         }
@@ -109,7 +108,7 @@ class LanguageActivity : BaseActivity<ActivityLanguageBinding>() {
 //            }
         }
 
-        if(NativeAdmobUtils.languageNativeAdmob1 == null && spManager.getBoolean(NameRemoteAdmob.NATIVE_LANGUAGE, true)){
+        if(NativeAdmobUtils.languageNativeAdmob1 == null && spManager.canShowAds()){
             NativeAdmobUtils.loadNativeLanguage()
         }
 
