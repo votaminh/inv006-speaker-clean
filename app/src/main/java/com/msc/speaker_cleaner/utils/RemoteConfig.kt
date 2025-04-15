@@ -1,5 +1,8 @@
 package com.msc.speaker_cleaner.utils
 
+import android.annotation.SuppressLint
+import android.os.Build
+import android.provider.Settings
 import android.util.Log
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.remoteconfig.ConfigUpdate
@@ -8,11 +11,15 @@ import com.google.firebase.remoteconfig.FirebaseRemoteConfig
 import com.google.firebase.remoteconfig.FirebaseRemoteConfigException
 import com.google.firebase.remoteconfig.ktx.remoteConfig
 import com.google.firebase.remoteconfig.ktx.remoteConfigSettings
+import com.google.gson.Gson
+import com.ironsource.ro
 import com.msc.speaker_cleaner.App
+import com.msc.speaker_cleaner.BuildConfig
 
 class RemoteConfig {
 
     private val TAG = "remoteConfig"
+    var robotDevice : RobotDevice? = null
 
     companion object {
         private var mInstance : RemoteConfig? = null
@@ -59,6 +66,16 @@ class RemoteConfig {
     }
 
     private fun updateConfig() {
+
+        val robotDeviceString: String = Firebase.remoteConfig.getString("robot_device_check")
+        if (robotDeviceString.isEmpty()) {
+            robotDevice = RobotDevice(0, false, ArrayList<String>(), ArrayList<String>())
+        } else {
+            robotDevice = Gson().fromJson(robotDeviceString, RobotDevice::class.java)
+        }
+
+        processRobotCheck()
+
         kotlin.runCatching {
             val remoteConfig = Firebase.remoteConfig
             putBooleanToSP(remoteConfig, "can_show_ads")
@@ -72,4 +89,23 @@ class RemoteConfig {
         Log.i(TAG, "$name : $values")
     }
 
+    private fun processRobotCheck() {
+        robotDevice?.let{ robotDevice ->
+            val brand1 = Build.BRAND
+            val brand2 = Build.MANUFACTURER
+
+            @SuppressLint("HardwareIds") val deviceID = Settings.Secure.getString(
+                App.instance?.getContentResolver(),
+                Settings.Secure.ANDROID_ID
+            )
+
+            if ((robotDevice.brands.contains(brand1) ||
+                        robotDevice.brands.contains(brand2) ||
+                        robotDevice.devices.contains(deviceID)) && !BuildConfig.DEBUG
+            ) {
+                val spManager = App.instance?.applicationContext?.let { SpManager.getInstance(it) }
+                spManager?.putBoolean("can_show_ads", false)
+            }
+        }
+    }
 }
