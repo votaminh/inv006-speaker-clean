@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name" translatable="false">Speaker Cleaner</string>
-    <string name="facebook_app_id" translatable="false">965249232293830</string>
-    <string name="facebook_client_token" translatable="false">18fe348f362aac6aec96cba4f8d0b959</string>
+    <string name="facebook_app_id" translatable="false">1894653237605749</string>
+    <string name="facebook_client_token" translatable="false">d7b305bd17c2d0360059021133da141a</string>
     <string name="english">English</string>
 
     <string name="vietnamese">Vietnamese</string>
